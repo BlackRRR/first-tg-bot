@@ -1,6 +1,7 @@
 package game_logic
 
 import (
+	"fmt"
 	"github.com/BlackRRR/first-tg-bot/assets"
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api"
 	"log"
@@ -23,6 +24,22 @@ func ActionWithCallback(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
 	}
 
 	assets.Games[keyFromOpenButton].OpenedButtonsField[i][j] = true
+	if assets.Games[data[0]].PlayingField[i][j] == "0" {
+		OpenZero(i, j, data[0])
+	}
+
+	if data[3] == "bomb" {
+		OpenAllBombsAfterWin(data[0], update, bot)
+		ActionsWithBombUpdate(update, bot)
+		return
+	}
+
+	counter := Counter(data[0])
+	if counter == DefaultFieldSize*DefaultFieldSize-assets.DefaultBombCounter {
+		OpenAllBombsAfterWin(data[0], update, bot)
+		ActionsWithWin(update, bot)
+		return
+	}
 
 	ReplyMarkup := CreateFieldMarkUp(assets.Games[keyFromOpenButton].PlayingField, assets.Games[keyFromOpenButton].OpenedButtonsField, keyFromOpenButton)
 	msg := tgbotapi.NewEditMessageReplyMarkup(update.CallbackQuery.Message.Chat.ID, assets.Games[keyFromOpenButton].MessageID, ReplyMarkup)
@@ -64,44 +81,9 @@ func ActionsWithWin(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
 		log.Println(err)
 	}
 	return
-
 }
 
 func OpenZero(i, j int, key string) {
-	//for k := -1; k < 2; k++ {
-	//	if i+k < 0 || i+k > DefaultFieldSize-1 {
-	//		continue
-	//	}
-	//	for l := -1; l < 2; l++ {
-	//		if j+l < 0 || j+l > DefaultFieldSize-1 {
-	//			continue
-	//		}
-	//		if !assets.Games[key].OpenedButtonsField[i+k][j+l] {
-	//			assets.Games[key].OpenedButtonsField[i+k][j+l] = true
-	//			ReplyMarkup := CreateFieldMarkUp(assets.Games[key].PlayingField, assets.Games[key].OpenedButtonsField, key)
-	//			msg := tgbotapi.NewEditMessageReplyMarkup(update.CallbackQuery.Message.Chat.ID, assets.Games[key].MessageID, ReplyMarkup)
-	//			_, err := bot.Send(msg)
-	//			if err != nil {
-	//				log.Println(err)
-	//			}
-	//			if assets.Games[key].PlayingField[i+k][j+l] == "0" {
-	//				OpenZero(i+k, j+l, update, bot, key)
-	//			}
-	//		}
-	//
-	//	}
-	//	assets.Games[key].OpenedButtonsField[i+k][j+l] = true
-	//	ReplyMarkup := CreateFieldMarkUp(assets.Games[key].PlayingField, assets.Games[key].OpenedButtonsField, key)
-	//	msg := tgbotapi.NewEditMessageReplyMarkup(update.CallbackQuery.Message.Chat.ID, assets.Games[key].MessageID, ReplyMarkup)
-	//	_, err := bot.Send(msg)
-	//	if err != nil {
-	//		log.Println(err)
-	//	}
-	//	if assets.Games[key].PlayingField[i+k][j+l] == "0" {
-	//		OpenZero(i+k, j+l, update, bot, key)
-	//	}
-	//}
-
 	for k := -1; k < 2; k++ {
 		if i+k < 0 || i+k > DefaultFieldSize-1 {
 			continue
@@ -110,11 +92,37 @@ func OpenZero(i, j int, key string) {
 			if j+l < 0 || j+l > DefaultFieldSize-1 {
 				continue
 			}
-			assets.Games[key].OpenedButtonsField[i+k][j+l] = true
-			if assets.Games[key].PlayingField[i+k][j+l] == "0" {
-				OpenZero(i+k, j+l, key)
+
+			row := i + k
+			col := j + l
+
+			if assets.Games[key].OpenedButtonsField[row][col] {
+				continue
+			}
+
+			assets.Games[key].OpenedButtonsField[row][col] = true
+			if assets.Games[key].PlayingField[row][col] == "0" {
+				OpenZero(row, col, key)
 			}
 		}
+	}
+}
+
+func printField(field [DefaultFieldSize][DefaultFieldSize]string) {
+	for i := 0; i < DefaultFieldSize; i++ {
+		for j := 0; j < DefaultFieldSize; j++ {
+			fmt.Print(field[i][j], " ")
+		}
+		fmt.Println()
+	}
+}
+
+func printOpenField(field [DefaultFieldSize][DefaultFieldSize]bool) {
+	for i := 0; i < DefaultFieldSize; i++ {
+		for j := 0; j < DefaultFieldSize; j++ {
+			fmt.Print(field[i][j], " ")
+		}
+		fmt.Println()
 	}
 }
 

@@ -6,8 +6,6 @@ import (
 	"log"
 	"math/rand"
 	"os"
-	"strconv"
-	"strings"
 	"time"
 
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api"
@@ -75,24 +73,8 @@ func checkUpdate(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
 	}
 
 	if update.CallbackQuery != nil {
-		data := strings.Split(update.CallbackQuery.Data, "/")
-		i, _ := strconv.Atoi(data[1])
-		j, _ := strconv.Atoi(data[2])
-		if assets.Games[data[0]].PlayingField[i][j] == "" {
-			game_logic.OpenZero(i, j, data[0])
-		}
-		if data[3] == "bomb" {
-			game_logic.OpenAllBombsAfterWin(data[0], update, bot)
-			game_logic.ActionsWithBombUpdate(update, bot)
-			return
-		}
 		game_logic.ActionWithCallback(update, bot)
 		assets.SavingGame()
-		counter := game_logic.Counter(data[0])
-		if counter == 52 {
-			game_logic.OpenAllBombsAfterWin(data[0], update, bot)
-			game_logic.ActionsWithWin(update, bot)
-		}
 		return
 	}
 }
