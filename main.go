@@ -60,7 +60,8 @@ func actionsWithUpdates(updates tgbotapi.UpdatesChannel, bot *tgbotapi.BotAPI) {
 func checkUpdate(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
 	if update.Message != nil {
 		if update.Message.Command() == "sapper" {
-			NewSapperGame(update.Message, bot)
+			key := GenerateField()
+			NewSapperGame(update.Message, bot, key)
 			assets.SavingGame()
 			return
 		}
@@ -79,11 +80,7 @@ func checkUpdate(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
 	}
 }
 
-func NewSapperGame(message *tgbotapi.Message, bot *tgbotapi.BotAPI) {
-	key := generateKey()
-	assets.Games[key] = &assets.Game{}
-	assets.Games[key].FillField()
-
+func NewSapperGame(message *tgbotapi.Message, bot *tgbotapi.BotAPI, key string) {
 	msg := tgbotapi.NewMessage(message.Chat.ID, "Игра началась")
 	msg.ReplyMarkup = game_logic.CreateFieldMarkUp(assets.Games[key].PlayingField, assets.Games[key].OpenedButtonsField, key)
 	msgData, err := bot.Send(msg)
@@ -92,6 +89,13 @@ func NewSapperGame(message *tgbotapi.Message, bot *tgbotapi.BotAPI) {
 	}
 
 	assets.Games[key].MessageID = msgData.MessageID
+}
+
+func GenerateField() string {
+	key := generateKey()
+	assets.Games[key] = &assets.Game{}
+	assets.Games[key].FillField()
+	return key
 }
 
 func generateKey() string {

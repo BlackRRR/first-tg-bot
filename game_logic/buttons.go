@@ -27,10 +27,14 @@ func createRowButton(field [DefaultFieldSize][DefaultFieldSize]string, j int, op
 
 func createButton(field [DefaultFieldSize][DefaultFieldSize]string, openField [DefaultFieldSize][DefaultFieldSize]bool, i, j int, key string) tgbotapi.InlineKeyboardButton {
 	var data string
-	data = key + "/" + strconv.Itoa(i) + "/" + strconv.Itoa(j) + "/" + field[i][j]
+	counter := Counter(key)
+	data = key + "/" + strconv.Itoa(i) + "/" + strconv.Itoa(j)
 	if openField[i][j] {
 		if field[i][j] == "bomb" {
-			return tgbotapi.NewInlineKeyboardButtonData("😍", data)
+			if counter == DefaultFieldSize*DefaultFieldSize {
+				return tgbotapi.NewInlineKeyboardButtonData("😍", data)
+			}
+			return tgbotapi.NewInlineKeyboardButtonData("💣", data)
 		}
 		return tgbotapi.NewInlineKeyboardButtonData(field[i][j], data)
 	}

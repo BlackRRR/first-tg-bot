@@ -12,7 +12,7 @@ import (
 const (
 	GamesSavePath      = "assets/game_save.json"
 	DefaultFieldSize   = 8
-	DefaultBombCounter = 12
+	DefaultBombCounter = 3
 )
 
 var (
