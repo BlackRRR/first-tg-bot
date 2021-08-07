@@ -1,7 +1,6 @@
 package game_logic
 
 import (
-	"fmt"
 	"github.com/BlackRRR/first-tg-bot/assets"
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api"
 	"log"
@@ -9,21 +8,48 @@ import (
 	"strings"
 )
 
+var DeveloperMode bool //true = admin, false = all users
+
 func ActionWithCallback(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
+	if update.CallbackQuery.Data == "start" {
+		return
+	}
+
+	switch update.CallbackQuery.Data {
+	case "turn on":
+		DeveloperMode = true
+		CheckDeveloperMode(update, bot, DeveloperMode)
+		return
+	case "turn off":
+		DeveloperMode = false
+		CheckDeveloperMode(update, bot, DeveloperMode)
+		return
+	}
+
+	if update.CallbackQuery.Data == "5" || update.CallbackQuery.Data == "6" || update.CallbackQuery.Data == "7" || update.CallbackQuery.Data == "8" {
+		TakeCallBackFieldSize(update, bot)
+		return
+	}
+
 	data := strings.Split(update.CallbackQuery.Data, "/")
 	key := data[0]
 	i, _ := strconv.Atoi(data[1])
 	j, _ := strconv.Atoi(data[2])
 
-	if assets.Games[key].PlayingField[i][j] != "0" && Counter(key) == 0 && assets.Games[key].PlayingField[i][j] != "" {
-		assets.Games[key] = &assets.Game{}
-		assets.Games[key].FillField()
-		ReEditField(update, bot, key)
-		ActionWithCallback(update, bot)
+	if _, exist := assets.Games[key]; !exist {
 		return
 	}
 
-	if _, exist := assets.Games[key]; !exist {
+	if assets.Games[key].PlayingField[i][j] == " " {
+		return
+	}
+
+	if assets.Games[key].PlayingField[i][j] != "0" && Counter(key) == 0 {
+		assets.Games[key] = &assets.Game{}
+		assets.Games[key].FillEmptyField()
+		assets.Games[key].FillField()
+		ReEditField(update, bot, key)
+		ActionWithCallback(update, bot)
 		return
 	}
 
@@ -31,11 +57,8 @@ func ActionWithCallback(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
 		return
 	}
 
-	if assets.Games[key].PlayingField[i][j] == "" {
-		return
-	}
-
 	assets.Games[key].OpenedButtonsField[i][j] = true
+
 	if assets.Games[data[0]].PlayingField[i][j] == "0" {
 		OpenZero(i, j, data[0])
 	}
@@ -47,8 +70,7 @@ func ActionWithCallback(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
 	}
 
 	counter := Counter(data[0])
-	fmt.Println(counter)
-	if counter == DefaultFieldSize*DefaultFieldSize-assets.DefaultBombCounter {
+	if counter == assets.Size*assets.Size-assets.BombCounter {
 		OpenAllBombsAfterWin(data[0])
 		ActionsWithWin(data[0], update, bot)
 		return
@@ -61,6 +83,41 @@ func ActionWithCallback(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
 		log.Println(err)
 	}
 	return
+}
+
+func TakeCallBackFieldSize(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
+	switch update.CallbackQuery.Data {
+	case "5":
+		assets.Size = 5
+		assets.BombCounter = 5
+		key := GenerateField()
+		NewSapperGame(update, bot, key)
+		SavingGame()
+		return
+	case "6":
+		assets.Size = 6
+		assets.BombCounter = 6
+		key := GenerateField()
+		NewSapperGame(update, bot, key)
+		SavingGame()
+		return
+	case "7":
+		assets.Size = 7
+		assets.BombCounter = 8
+		key := GenerateField()
+		NewSapperGame(update, bot, key)
+		SavingGame()
+		return
+	case "8":
+		assets.Size = 8
+		assets.BombCounter = 12
+		key := GenerateField()
+		NewSapperGame(update, bot, key)
+		SavingGame()
+		return
+	default:
+		return
+	}
 }
 
 func ActionsWithBombUpdate(i, j int, key string, update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
@@ -80,6 +137,7 @@ func ActionsWithBombUpdate(i, j int, key string, update *tgbotapi.Update, bot *t
 	}
 
 	assets.Games[key] = &assets.Game{}
+	assets.Games[key].FillEmptyField()
 	return
 }
 
@@ -97,78 +155,23 @@ func ActionsWithWin(key string, update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
 	}
 
 	assets.Games[key] = &assets.Game{}
+	assets.Games[key].FillEmptyField()
 	return
 
 }
 
-func OpenZero(i, j int, key string) {
-	for k := -1; k < 2; k++ {
-		if i+k < 0 || i+k > DefaultFieldSize-1 {
-			continue
+func CheckDeveloperMode(update *tgbotapi.Update, bot *tgbotapi.BotAPI, developerMode bool) {
+	if developerMode {
+		msg := tgbotapi.NewMessage(update.CallbackQuery.Message.Chat.ID, "Режим Администрации включен")
+		_, err := bot.Send(msg)
+		if err != nil {
+			log.Println(err)
 		}
-		for l := -1; l < 2; l++ {
-			if j+l < 0 || j+l > DefaultFieldSize-1 {
-				continue
-			}
-
-			row := i + k
-			col := j + l
-
-			if assets.Games[key].OpenedButtonsField[row][col] {
-				continue
-			}
-
-			assets.Games[key].OpenedButtonsField[row][col] = true
-			if assets.Games[key].PlayingField[row][col] == "0" {
-				OpenZero(row, col, key)
-			}
+	} else {
+		msg := tgbotapi.NewMessage(update.CallbackQuery.Message.Chat.ID, "Режим Администрации выключен")
+		_, err := bot.Send(msg)
+		if err != nil {
+			log.Println(err)
 		}
-	}
-}
-
-func printField(field [DefaultFieldSize][DefaultFieldSize]string) {
-	for i := 0; i < DefaultFieldSize; i++ {
-		for j := 0; j < DefaultFieldSize; j++ {
-			fmt.Print(field[i][j], " ")
-		}
-		fmt.Println()
-	}
-}
-
-func printOpenField(field [DefaultFieldSize][DefaultFieldSize]bool) {
-	for i := 0; i < DefaultFieldSize; i++ {
-		for j := 0; j < DefaultFieldSize; j++ {
-			fmt.Print(field[i][j], " ")
-		}
-		fmt.Println()
-	}
-}
-
-func OpenAllBombsAfterWin(key string) {
-	for i := 0; i < assets.DefaultFieldSize; i++ {
-		for j := 0; j < assets.DefaultFieldSize; j++ {
-			if assets.Games[key].OpenedButtonsField[i][j] == false && assets.Games[key].PlayingField[i][j] == "bomb" {
-				assets.Games[key].OpenedButtonsField[i][j] = true
-			}
-		}
-	}
-}
-func Counter(key string) int {
-	var counter int
-	for i := 0; i < DefaultFieldSize; i++ {
-		for j := 0; j < DefaultFieldSize; j++ {
-			if assets.Games[key].OpenedButtonsField[i][j] {
-				counter++
-			}
-		}
-	}
-	return counter
-}
-
-func ReEditField(update *tgbotapi.Update, bot *tgbotapi.BotAPI, key string) {
-	ReplyMarkup := CreateFieldMarkUp(assets.Games[key].PlayingField, assets.Games[key].OpenedButtonsField, key)
-	msg := tgbotapi.NewEditMessageReplyMarkup(update.CallbackQuery.Message.Chat.ID, update.CallbackQuery.Message.MessageID, ReplyMarkup)
-	if _, err := bot.Send(msg); err != nil {
-		log.Println(err)
 	}
 }

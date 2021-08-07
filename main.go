@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/BlackRRR/first-tg-bot/assets"
+	"fmt"
 	"github.com/BlackRRR/first-tg-bot/game_logic"
 	"log"
 	"math/rand"
@@ -12,15 +12,15 @@ import (
 )
 
 const (
-	AvailableSymbolInKey = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyz"
-	GameKeyLength        = 16
+	AdminId       = 872383555
+	AdminUserName = "BlackR0_0"
 )
 
 func main() {
 	rand.Seed(time.Now().Unix())
 
 	bot, updates := startBot()
-	assets.UploadGame()
+	game_logic.UploadGame()
 
 	actionsWithUpdates(updates, bot)
 }
@@ -40,7 +40,6 @@ func startBot() (*tgbotapi.BotAPI, tgbotapi.UpdatesChannel) {
 	if err != nil {
 		panic("Failed to initialize bot: " + err.Error())
 	}
-
 	log.Println("The bot is running")
 
 	return bot, updates
@@ -57,13 +56,44 @@ func actionsWithUpdates(updates tgbotapi.UpdatesChannel, bot *tgbotapi.BotAPI) {
 	}
 }
 
+func SendWorkIsUnderwayMessage(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
+	msg := tgbotapi.NewMessage(update.Message.Chat.ID, "Ведуться работы...")
+	if _, err := bot.Send(msg); err != nil {
+		log.Println(err)
+	}
+	return
+}
+
+func SendWorkIsUnderwayCallback(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
+	msg := tgbotapi.NewCallback(update.CallbackQuery.ID, "Ведуться работы...")
+	if _, err := bot.AnswerCallbackQuery(msg); err != nil {
+		log.Println(err)
+	}
+	return
+}
+
 func checkUpdate(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
 	if update.Message != nil {
-		if update.Message.Command() == "sapper" {
-			key := GenerateField()
-			NewSapperGame(update.Message, bot, key)
-			assets.SavingGame()
+
+		//db := database.DBConn()
+		//_, username := database.GetAllData(db)
+		//CheckUsersFromDB(username)
+		//database.AddDB(db,update.Message.From.ID,update.Message.From.UserName)
+
+		if game_logic.DeveloperMode && update.Message.From.ID != AdminId {
+			SendWorkIsUnderwayMessage(update, bot)
 			return
+		}
+
+		switch update.Message.Command() {
+		case "sapper":
+			game_logic.TakeFieldSize(update, bot)
+			return
+		case "admin":
+			if update.Message.From.ID == AdminId {
+				CreateAdminButtons(update, bot)
+				return
+			}
 		}
 
 		msg := tgbotapi.NewMessage(update.Message.Chat.ID, "Нажмите /sapper чтобы начать игру")
@@ -74,35 +104,33 @@ func checkUpdate(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
 	}
 
 	if update.CallbackQuery != nil {
+		if game_logic.DeveloperMode && update.CallbackQuery.From.ID != AdminId {
+			SendWorkIsUnderwayCallback(update, bot)
+			return
+		}
+
 		game_logic.ActionWithCallback(update, bot)
-		assets.SavingGame()
+		game_logic.SavingGame()
 		return
 	}
 }
 
-func NewSapperGame(message *tgbotapi.Message, bot *tgbotapi.BotAPI, key string) {
-	msg := tgbotapi.NewMessage(message.Chat.ID, "Игра началась")
-	msg.ReplyMarkup = game_logic.CreateFieldMarkUp(assets.Games[key].PlayingField, assets.Games[key].OpenedButtonsField, key)
-	msgData, err := bot.Send(msg)
-	if err != nil {
+func CreateAdminButtons(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
+	msg := tgbotapi.NewMessage(update.Message.Chat.ID, "/admin")
+	msg.ReplyMarkup = tgbotapi.NewInlineKeyboardMarkup(
+		tgbotapi.NewInlineKeyboardRow(
+			tgbotapi.NewInlineKeyboardButtonData("Отправить всем сообщение о старте бота", "start")),
+		tgbotapi.NewInlineKeyboardRow(
+			tgbotapi.NewInlineKeyboardButtonData("Включить Режим Администратора", "turn on"),
+			tgbotapi.NewInlineKeyboardButtonData("Вылючить Режим Администратора", "turn off"),
+		))
+	if _, err := bot.Send(msg); err != nil {
 		log.Println(err)
 	}
-
-	assets.Games[key].MessageID = msgData.MessageID
 }
 
-func GenerateField() string {
-	key := generateKey()
-	assets.Games[key] = &assets.Game{}
-	assets.Games[key].FillField()
-	return key
-}
-
-func generateKey() string {
-	var key string
-	slice := []rune(AvailableSymbolInKey)
-	for i := 0; i < GameKeyLength; i++ {
-		key += string(slice[rand.Intn(len(slice))])
+func CheckUsersFromDB(userName []string) {
+	for i := range userName {
+		fmt.Println(userName[i])
 	}
-	return key
 }

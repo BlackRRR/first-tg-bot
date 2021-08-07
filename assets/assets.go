@@ -1,36 +1,52 @@
 package assets
 
 import (
-	"encoding/json"
-	"fmt"
-	"log"
 	"math/rand"
-	"os"
 	"strconv"
 )
 
 const (
-	GamesSavePath      = "assets/game_save.json"
-	DefaultFieldSize   = 8
-	DefaultBombCounter = 3
+	GamesSavePath = "assets/game_save.json"
 )
 
 var (
-	Games = make(map[string]*Game)
+	Games       = make(map[string]*Game)
+	Size        int
+	BombCounter int
 )
 
 type Game struct {
-	PlayingField       [DefaultFieldSize][DefaultFieldSize]string
-	OpenedButtonsField [DefaultFieldSize][DefaultFieldSize]bool
+	PlayingField       [][]string
+	OpenedButtonsField [][]bool
 	MessageID          int
 }
 
+func (g *Game) FillEmptyField() {
+	var field [][]string
+	var open [][]bool
+
+	for i := 0; i < Size; i++ {
+		field = append(field, []string{})
+		for j := 0; j < Size; j++ {
+			field[i] = append(field[i], " ")
+		}
+	}
+	for i := 0; i < Size; i++ {
+		open = append(open, []bool{})
+		for j := 0; j < Size; j++ {
+			open[i] = append(open[i], false)
+		}
+		g.PlayingField = field
+		g.OpenedButtonsField = open
+	}
+}
+
 func (g *Game) FillField() {
-	for i := 0; i < DefaultBombCounter; i++ {
+	for i := 0; i < BombCounter; i++ {
 		g.deployingBomb()
 	}
-	for i := 0; i < DefaultFieldSize; i++ {
-		for j := 0; j < DefaultFieldSize; j++ {
+	for i := 0; i < Size; i++ {
+		for j := 0; j < Size; j++ {
 			if g.PlayingField[i][j] == "bomb" {
 				continue
 			}
@@ -42,25 +58,24 @@ func (g *Game) FillField() {
 func (g *Game) deployingBomb() {
 	var flag bool
 	for !flag {
-		cell := rand.Intn(DefaultFieldSize * DefaultFieldSize)
-		row := cell % 8
-		column := cell / 8
-
-		if g.PlayingField[row][column] == "" {
+		cell := rand.Intn(Size * Size)
+		row := cell % Size
+		column := cell / Size
+		if g.PlayingField[row][column] == " " {
 			g.PlayingField[row][column] = "bomb"
 			flag = true
 		}
 	}
 }
 
-func bombAround(field [DefaultFieldSize][DefaultFieldSize]string, i, j int) int {
+func bombAround(field [][]string, i, j int) int {
 	var counter int
 	for k := -1; k < 2; k++ {
-		if i+k < 0 || i+k > DefaultFieldSize-1 {
+		if i+k < 0 || i+k > Size-1 {
 			continue
 		}
 		for l := -1; l < 2; l++ {
-			if j+l < 0 || j+l > DefaultFieldSize-1 {
+			if j+l < 0 || j+l > Size-1 {
 				continue
 			}
 			if field[i+k][j+l] == "bomb" {
@@ -69,30 +84,4 @@ func bombAround(field [DefaultFieldSize][DefaultFieldSize]string, i, j int) int 
 		}
 	}
 	return counter
-}
-
-func UploadGame() {
-	var game map[string]*Game
-	data, err := os.ReadFile(GamesSavePath)
-	if err != nil {
-		fmt.Println(err)
-	}
-
-	err = json.Unmarshal(data, &game)
-	if err != nil {
-		fmt.Println(err)
-	}
-
-	Games = game
-}
-
-func SavingGame() {
-	dataSave, err := json.MarshalIndent(Games, "", "  ")
-	if err != nil {
-		log.Fatalln(err)
-	}
-	err = os.WriteFile(GamesSavePath, dataSave, 0600)
-	if err != nil {
-		log.Fatalln(err)
-	}
 }
