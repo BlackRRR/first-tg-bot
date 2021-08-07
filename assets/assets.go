@@ -11,7 +11,7 @@ const (
 
 var (
 	Games       = make(map[string]*Game)
-	Size        int
+	Size        int //TODO: this variable should not be global, it is unique for each game, so it should be the fields of the Game structure
 	BombCounter int
 )
 
@@ -36,7 +36,7 @@ func (g *Game) FillEmptyField() {
 		for j := 0; j < Size; j++ {
 			open[i] = append(open[i], false)
 		}
-		g.PlayingField = field
+		g.PlayingField = field //TODO: this action should not be performed several times, it should be performed after for, after line 33 and line 41
 		g.OpenedButtonsField = open
 	}
 }

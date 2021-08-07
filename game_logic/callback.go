@@ -8,9 +8,9 @@ import (
 	"strings"
 )
 
-var DeveloperMode bool //true = admin, false = all users
+var DeveloperMode bool //true = admin, false = all users //TODO: developer mode is not part of the game logic, it should rather lie in assets
 
-func ActionWithCallback(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
+func ActionWithCallback(update *tgbotapi.Update, bot *tgbotapi.BotAPI) { //TODO: remove all the business code from this function, it just needs to distribute the incoming callback to the desired handler function
 	if update.CallbackQuery.Data == "start" {
 		return
 	}

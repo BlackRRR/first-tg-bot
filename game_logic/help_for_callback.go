@@ -1,4 +1,4 @@
-package game_logic
+package game_logic //TODO: rename file name
 
 import (
 	"fmt"

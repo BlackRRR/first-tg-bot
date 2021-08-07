@@ -56,7 +56,7 @@ func actionsWithUpdates(updates tgbotapi.UpdatesChannel, bot *tgbotapi.BotAPI) {
 	}
 }
 
-func SendWorkIsUnderwayMessage(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
+func SendWorkIsUnderwayMessage(update *tgbotapi.Update, bot *tgbotapi.BotAPI) { //TODO: rename to ...UnderWayMsg; TODO: you don't need to pass the whole update here, just pass the chatId here
 	msg := tgbotapi.NewMessage(update.Message.Chat.ID, "Ведуться работы...")
 	if _, err := bot.Send(msg); err != nil {
 		log.Println(err)
@@ -64,7 +64,7 @@ func SendWorkIsUnderwayMessage(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
 	return
 }
 
-func SendWorkIsUnderwayCallback(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
+func SendWorkIsUnderwayCallback(update *tgbotapi.Update, bot *tgbotapi.BotAPI) { //TODO: transmit only the chatId
 	msg := tgbotapi.NewCallback(update.CallbackQuery.ID, "Ведуться работы...")
 	if _, err := bot.AnswerCallbackQuery(msg); err != nil {
 		log.Println(err)
