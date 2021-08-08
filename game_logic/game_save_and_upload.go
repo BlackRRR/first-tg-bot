@@ -1,4 +1,4 @@
-package game_logic
+package game_logic //TODO: this code should rather be in the assets folder, since this is not the logic of the game, but the logic of the launch
 
 import (
 	"encoding/json"

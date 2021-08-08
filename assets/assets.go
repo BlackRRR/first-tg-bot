@@ -1,4 +1,4 @@
-package assets
+package assets //TODO: assets should contain all sorts of text variables and the like, there should not be any methods
 
 import (
 	"math/rand"
