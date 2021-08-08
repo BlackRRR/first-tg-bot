@@ -8,21 +8,21 @@ import (
 	"strings"
 )
 
-var DeveloperMode bool //true = admin, false = all users //TODO: developer mode is not part of the game logic, it should rather lie in assets
+// developer mode is not part of the game logic, it should rather lie in assets
 
-func ActionWithCallback(update *tgbotapi.Update, bot *tgbotapi.BotAPI) { //TODO: remove all the business code from this function, it just needs to distribute the incoming callback to the desired handler function
+func ActionWithCallback(update *tgbotapi.Update, bot *tgbotapi.BotAPI) { // remove all the business code from this function, it just needs to distribute the incoming callback to the desired handler function
 	if update.CallbackQuery.Data == "start" {
 		return
 	}
 
 	switch update.CallbackQuery.Data {
 	case "turn on":
-		DeveloperMode = true
-		CheckDeveloperMode(update, bot, DeveloperMode)
+		assets.DeveloperMode = true
+		CheckDeveloperMode(update, bot, assets.DeveloperMode)
 		return
 	case "turn off":
-		DeveloperMode = false
-		CheckDeveloperMode(update, bot, DeveloperMode)
+		assets.DeveloperMode = false
+		CheckDeveloperMode(update, bot, assets.DeveloperMode)
 		return
 	}
 
@@ -31,87 +31,72 @@ func ActionWithCallback(update *tgbotapi.Update, bot *tgbotapi.BotAPI) { //TODO:
 		return
 	}
 
-	data := strings.Split(update.CallbackQuery.Data, "/")
-	key := data[0]
-	i, _ := strconv.Atoi(data[1])
-	j, _ := strconv.Atoi(data[2])
+	key, i, j := DataSplit(update.CallbackQuery.Data)
 
-	if _, exist := assets.Games[key]; !exist {
+	if _, exist := Games[key]; !exist {
 		return
 	}
 
-	if assets.Games[key].PlayingField[i][j] == " " {
+	if Games[key].PlayingField[i][j] == " " {
 		return
 	}
 
-	if assets.Games[key].PlayingField[i][j] != "0" && Counter(key) == 0 {
-		assets.Games[key] = &assets.Game{}
-		assets.Games[key].FillEmptyField()
-		assets.Games[key].FillField()
+	if Games[key].PlayingField[i][j] != "0" && Counter(key) == 0 {
 		ReEditField(update, bot, key)
 		ActionWithCallback(update, bot)
 		return
 	}
 
-	if assets.Games[key].OpenedButtonsField[i][j] {
+	if Games[key].OpenedButtonsField[i][j] {
 		return
 	}
 
-	assets.Games[key].OpenedButtonsField[i][j] = true
+	Games[key].OpenedButtonsField[i][j] = true
 
-	if assets.Games[data[0]].PlayingField[i][j] == "0" {
-		OpenZero(i, j, data[0])
+	if Games[key].PlayingField[i][j] == "0" {
+		OpenZero(i, j, key)
 	}
 
-	if assets.Games[data[0]].PlayingField[i][j] == "bomb" {
-		OpenAllBombsAfterWin(data[0])
-		ActionsWithBombUpdate(i, j, data[0], update, bot)
+	if Games[key].PlayingField[i][j] == "bomb" {
+		OpenAllBombsAfterWin(key)
+		ActionsWithBombUpdate(i, j, key, update, bot)
 		return
 	}
 
-	counter := Counter(data[0])
-	if counter == assets.Size*assets.Size-assets.BombCounter {
-		OpenAllBombsAfterWin(data[0])
-		ActionsWithWin(data[0], update, bot)
+	if Counter(key) == Games[key].Size*Games[key].Size-assets.BombCounter {
+		OpenAllBombsAfterWin(key)
+		ActionsWithWin(key, update, bot)
 		return
 	}
 
-	ReplyMarkup := CreateFieldMarkUp(assets.Games[key].PlayingField, assets.Games[key].OpenedButtonsField, key)
-	msg := tgbotapi.NewEditMessageReplyMarkup(update.CallbackQuery.Message.Chat.ID, update.CallbackQuery.Message.MessageID, ReplyMarkup)
+	CallEditMessage(key, update.CallbackQuery.Message.Chat.ID, update.CallbackQuery.Message.MessageID, bot)
 
-	if _, err := bot.Send(msg); err != nil {
-		log.Println(err)
-	}
 	return
 }
 
 func TakeCallBackFieldSize(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
 	switch update.CallbackQuery.Data {
 	case "5":
-		assets.Size = 5
 		assets.BombCounter = 5
-		key := GenerateField()
+		key := GenerateField(5)
 		NewSapperGame(update, bot, key)
 		SavingGame()
 		return
 	case "6":
-		assets.Size = 6
 		assets.BombCounter = 6
-		key := GenerateField()
+		key := GenerateField(6)
 		NewSapperGame(update, bot, key)
 		SavingGame()
 		return
 	case "7":
-		assets.Size = 7
 		assets.BombCounter = 8
-		key := GenerateField()
+		key := GenerateField(7)
 		NewSapperGame(update, bot, key)
 		SavingGame()
 		return
 	case "8":
-		assets.Size = 8
 		assets.BombCounter = 12
-		key := GenerateField()
+		key := GenerateField(8)
 		NewSapperGame(update, bot, key)
 		SavingGame()
 		return
@@ -123,9 +108,9 @@ func TakeCallBackFieldSize(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
 func ActionsWithBombUpdate(i, j int, key string, update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
 	msg := tgbotapi.NewMessage(update.CallbackQuery.Message.Chat.ID, "Вы проиграли\nнапишите /sapper для новой игры")
 
-	assets.Games[key].OpenedButtonsField[i][j] = true
+	Games[key].OpenedButtonsField[i][j] = true
 
-	ReplyMarkup := CreateFieldMarkUp(assets.Games[key].PlayingField, assets.Games[key].OpenedButtonsField, key)
+	ReplyMarkup := CreateFieldMarkUp(Games[key].PlayingField, Games[key].OpenedButtonsField, key)
 	msgAboutBomb := tgbotapi.NewEditMessageReplyMarkup(update.CallbackQuery.Message.Chat.ID, update.CallbackQuery.Message.MessageID, ReplyMarkup)
 
 	if _, err := bot.Send(msgAboutBomb); err != nil {
@@ -136,14 +121,16 @@ func ActionsWithBombUpdate(i, j int, key string, update *tgbotapi.Update, bot *t
 		log.Println(err)
 	}
 
-	assets.Games[key] = &assets.Game{}
-	assets.Games[key].FillEmptyField()
+	Size := Games[key].Size
+	Games[key] = &Game{}
+	Games[key].Size = Size
+	Games[key].FillEmptyField()
 	return
 }
 
 func ActionsWithWin(key string, update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
 	msg := tgbotapi.NewMessage(update.CallbackQuery.Message.Chat.ID, "Вы выйграли нажмите /sapper чтобы начать новую игру")
-	ReplyMarkup := CreateFieldMarkUp(assets.Games[key].PlayingField, assets.Games[key].OpenedButtonsField, key)
+	ReplyMarkup := CreateFieldMarkUp(Games[key].PlayingField, Games[key].OpenedButtonsField, key)
 	msgAboutBomb := tgbotapi.NewEditMessageReplyMarkup(update.CallbackQuery.Message.Chat.ID, update.CallbackQuery.Message.MessageID, ReplyMarkup)
 
 	if _, err := bot.Send(msgAboutBomb); err != nil {
@@ -154,8 +141,10 @@ func ActionsWithWin(key string, update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
 		log.Println(err)
 	}
 
-	assets.Games[key] = &assets.Game{}
-	assets.Games[key].FillEmptyField()
+	Size := Games[key].Size
+	Games[key] = &Game{}
+	Games[key].Size = Size
+	Games[key].FillEmptyField()
 	return
 
 }
@@ -173,5 +162,22 @@ func CheckDeveloperMode(update *tgbotapi.Update, bot *tgbotapi.BotAPI, developer
 		if err != nil {
 			log.Println(err)
 		}
+	}
+}
+
+func DataSplit(callbackData string) (key string, i, j int) {
+	data := strings.Split(callbackData, "/")
+	key = data[0]
+	i, _ = strconv.Atoi(data[1])
+	j, _ = strconv.Atoi(data[2])
+	return key, i, j
+}
+
+func CallEditMessage(key string, CallbackChatID int64, CallbackMsgID int, bot *tgbotapi.BotAPI) {
+	ReplyMarkup := CreateFieldMarkUp(Games[key].PlayingField, Games[key].OpenedButtonsField, key)
+	msg := tgbotapi.NewEditMessageReplyMarkup(CallbackChatID, CallbackMsgID, ReplyMarkup)
+
+	if _, err := bot.Send(msg); err != nil {
+		log.Println(err)
 	}
 }

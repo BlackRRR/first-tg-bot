@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/BlackRRR/first-tg-bot/assets"
 	"github.com/BlackRRR/first-tg-bot/game_logic"
 	"log"
 	"math/rand"
@@ -56,16 +57,16 @@ func actionsWithUpdates(updates tgbotapi.UpdatesChannel, bot *tgbotapi.BotAPI) {
 	}
 }
 
-func SendWorkIsUnderwayMessage(update *tgbotapi.Update, bot *tgbotapi.BotAPI) { //TODO: rename to ...UnderWayMsg; TODO: you don't need to pass the whole update here, just pass the chatId here
-	msg := tgbotapi.NewMessage(update.Message.Chat.ID, "Ведуться работы...")
+func UnderwayMessage(ChatId int64, bot *tgbotapi.BotAPI) { // rename to ...UnderWayMsg; : you don't need to pass the whole update here, just pass the chatId here
+	msg := tgbotapi.NewMessage(ChatId, "Ведуться работы...")
 	if _, err := bot.Send(msg); err != nil {
 		log.Println(err)
 	}
 	return
 }
 
-func SendWorkIsUnderwayCallback(update *tgbotapi.Update, bot *tgbotapi.BotAPI) { //TODO: transmit only the chatId
-	msg := tgbotapi.NewCallback(update.CallbackQuery.ID, "Ведуться работы...")
+func UnderwayCallback(CallbackId string, bot *tgbotapi.BotAPI) { // transmit only the chatId
+	msg := tgbotapi.NewCallback(CallbackId, "Ведуться работы...")
 	if _, err := bot.AnswerCallbackQuery(msg); err != nil {
 		log.Println(err)
 	}
@@ -80,8 +81,8 @@ func checkUpdate(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
 		//CheckUsersFromDB(username)
 		//database.AddDB(db,update.Message.From.ID,update.Message.From.UserName)
 
-		if game_logic.DeveloperMode && update.Message.From.ID != AdminId {
-			SendWorkIsUnderwayMessage(update, bot)
+		if assets.DeveloperMode && update.Message.From.ID != AdminId {
+			UnderwayMessage(update.Message.Chat.ID, bot)
 			return
 		}
 
@@ -104,8 +105,8 @@ func checkUpdate(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
 	}
 
 	if update.CallbackQuery != nil {
-		if game_logic.DeveloperMode && update.CallbackQuery.From.ID != AdminId {
-			SendWorkIsUnderwayCallback(update, bot)
+		if assets.DeveloperMode && update.CallbackQuery.From.ID != AdminId {
+			UnderwayCallback(update.CallbackQuery.ID, bot)
 			return
 		}
 

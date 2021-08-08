@@ -1,7 +1,6 @@
 package game_logic
 
 import (
-	"github.com/BlackRRR/first-tg-bot/assets"
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api"
 	"log"
 	"math/rand"
@@ -28,13 +27,13 @@ func TakeFieldSize(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
 
 func NewSapperGame(update *tgbotapi.Update, bot *tgbotapi.BotAPI, key string) {
 	msg := tgbotapi.NewMessage(update.CallbackQuery.Message.Chat.ID, "Игра началась")
-	msg.ReplyMarkup = CreateFieldMarkUp(assets.Games[key].PlayingField, assets.Games[key].OpenedButtonsField, key)
+	msg.ReplyMarkup = CreateFieldMarkUp(Games[key].PlayingField, Games[key].OpenedButtonsField, key)
 	msgData, err := bot.Send(msg)
 	if err != nil {
 		log.Println(err)
 	}
 
-	assets.Games[key].MessageID = msgData.MessageID
+	Games[key].MessageID = msgData.MessageID
 }
 
 func generateKey() string {
@@ -46,10 +45,11 @@ func generateKey() string {
 	return key
 }
 
-func GenerateField() string {
+func GenerateField(Size int) string {
 	key := generateKey()
-	assets.Games[key] = &assets.Game{}
-	assets.Games[key].FillEmptyField()
-	assets.Games[key].FillField()
+	Games[key] = &Game{}
+	Games[key].Size = Size
+	Games[key].FillEmptyField()
+	Games[key].FillField()
 	return key
 }

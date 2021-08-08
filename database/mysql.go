@@ -7,9 +7,9 @@ import (
 	"log"
 )
 
-type User struct { //TODO: use the `json` tag only if you are going to transfer it somewhere, you don't need to transfer it anywhere, so you can remove it
-	userid   int    `json:"user_id"`   //TODO: UserID	if the structure field starts with a small letter it is visible only inside the folder
-	username string `json:"user_name"` //TODO: UserName	the first letters of different words must begin with capital letters
+type User struct { // use the `json` tag only if you are going to transfer it somewhere, you don't need to transfer it anywhere, so you can remove it
+	UserID   int    // UserID	if the structure field starts with a small letter it is visible only inside the folder
+	UserName string // UserName	the first letters of different words must begin with capital letters
 }
 
 func DBConn() *sql.DB {
@@ -34,7 +34,7 @@ func AddDB(db *sql.DB, userID int, userName string) {
 	defer db.Close()
 }
 
-func GetAllData(db *sql.DB) (Users []User, username []string) { //TODO: you have an array of users that already contains username, why pass them separately?
+func GetAllData(db *sql.DB) (Users []User) { // you have an array of users that already contains UserName, why pass them separately?
 	resp, err := db.Query("SELECT * FROM `users`")
 	if err != nil {
 		log.Println(err)
@@ -44,16 +44,13 @@ func GetAllData(db *sql.DB) (Users []User, username []string) { //TODO: you have
 
 	for resp.Next() {
 		var user User
-		var UserName string
-		err = resp.Scan(&user.userid, &user.username)
+		err = resp.Scan(&user.UserID, &user.UserName)
 		if err != nil {
 			log.Println(err)
 		}
 
-		UserName = user.username
-		username = append(username, UserName)
 		Users = append(Users, user)
 	}
 
-	return Users, username
+	return Users
 }

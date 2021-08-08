@@ -9,7 +9,7 @@ import (
 )
 
 func UploadGame() {
-	var game map[string]*assets.Game
+	var game map[string]*Game
 	data, err := os.ReadFile(assets.GamesSavePath)
 	if err != nil {
 		fmt.Println(err)
@@ -20,11 +20,11 @@ func UploadGame() {
 		fmt.Println(err)
 	}
 
-	assets.Games = game
+	Games = game
 }
 
 func SavingGame() {
-	dataSave, err := json.MarshalIndent(assets.Games, "", "  ")
+	dataSave, err := json.MarshalIndent(Games, "", "  ")
 	if err != nil {
 		log.Fatalln(err)
 	}
