@@ -21,7 +21,7 @@ func main() {
 	rand.Seed(time.Now().Unix())
 
 	bot, updates := startBot()
-	game_logic.UploadGame()
+	assets.UploadGame()
 
 	actionsWithUpdates(updates, bot)
 }
@@ -57,7 +57,7 @@ func actionsWithUpdates(updates tgbotapi.UpdatesChannel, bot *tgbotapi.BotAPI) {
 	}
 }
 
-func UnderwayMessage(ChatId int64, bot *tgbotapi.BotAPI) { // rename to ...UnderWayMsg; : you don't need to pass the whole update here, just pass the chatId here
+func SendWorkIsUnderWayMsg(ChatId int64, bot *tgbotapi.BotAPI) { // rename to ...UnderWayMsg; : you don't need to pass the whole update here, just pass the chatId here
 	msg := tgbotapi.NewMessage(ChatId, "Ведуться работы...")
 	if _, err := bot.Send(msg); err != nil {
 		log.Println(err)
@@ -65,7 +65,7 @@ func UnderwayMessage(ChatId int64, bot *tgbotapi.BotAPI) { // rename to ...Under
 	return
 }
 
-func UnderwayCallback(CallbackId string, bot *tgbotapi.BotAPI) { // transmit only the chatId
+func SendWorkIsUnderWayCallBack(CallbackId string, bot *tgbotapi.BotAPI) { // transmit only the chatId
 	msg := tgbotapi.NewCallback(CallbackId, "Ведуться работы...")
 	if _, err := bot.AnswerCallbackQuery(msg); err != nil {
 		log.Println(err)
@@ -82,7 +82,7 @@ func checkUpdate(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
 		//database.AddDB(db,update.Message.From.ID,update.Message.From.UserName)
 
 		if assets.DeveloperMode && update.Message.From.ID != AdminId {
-			UnderwayMessage(update.Message.Chat.ID, bot)
+			SendWorkIsUnderWayMsg(update.Message.Chat.ID, bot)
 			return
 		}
 
@@ -106,12 +106,12 @@ func checkUpdate(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
 
 	if update.CallbackQuery != nil {
 		if assets.DeveloperMode && update.CallbackQuery.From.ID != AdminId {
-			UnderwayCallback(update.CallbackQuery.ID, bot)
+			SendWorkIsUnderWayCallBack(update.CallbackQuery.ID, bot)
 			return
 		}
 
 		game_logic.ActionWithCallback(update, bot)
-		game_logic.SavingGame()
+		assets.SavingGame()
 		return
 	}
 }

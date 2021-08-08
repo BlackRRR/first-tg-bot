@@ -7,9 +7,9 @@ import (
 	"log"
 )
 
-type User struct { // use the `json` tag only if you are going to transfer it somewhere, you don't need to transfer it anywhere, so you can remove it
-	UserID   int    // UserID	if the structure field starts with a small letter it is visible only inside the folder
-	UserName string // UserName	the first letters of different words must begin with capital letters
+type User struct {
+	UserID   int
+	UserName string
 }
 
 func DBConn() *sql.DB {

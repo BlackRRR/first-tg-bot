@@ -1,13 +1,8 @@
-package game_logic
+package models
 
 import (
-	"github.com/BlackRRR/first-tg-bot/assets"
 	"math/rand"
 	"strconv"
-)
-
-var (
-	Games = make(map[string]*Game)
 )
 
 type Game struct {
@@ -15,6 +10,7 @@ type Game struct {
 	OpenedButtonsField [][]bool
 	MessageID          int
 	Size               int
+	BombCounter        int
 }
 
 func (g *Game) FillEmptyField() {
@@ -28,17 +24,18 @@ func (g *Game) FillEmptyField() {
 		}
 	}
 	g.PlayingField = field
+
 	for i := 0; i < g.Size; i++ {
 		open = append(open, []bool{})
 		for j := 0; j < g.Size; j++ {
 			open[i] = append(open[i], false)
-		} // this action should not be performed several times, it should be performed after for, after line 33 and line 41
+		}
 	}
 	g.OpenedButtonsField = open
 }
 
 func (g *Game) FillField() {
-	for i := 0; i < assets.BombCounter; i++ {
+	for i := 0; i < g.BombCounter; i++ {
 		g.deployingBomb()
 	}
 	for i := 0; i < g.Size; i++ {
