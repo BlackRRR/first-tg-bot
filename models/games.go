@@ -6,6 +6,7 @@ import (
 )
 
 type Game struct {
+	Key                string
 	PlayingField       [][]string
 	OpenedButtonsField [][]bool
 	MessageID          int

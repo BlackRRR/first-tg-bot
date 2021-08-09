@@ -27,9 +27,9 @@ func TakeFieldSize(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
 	}
 }
 
-func NewSapperGame(update *tgbotapi.Update, bot *tgbotapi.BotAPI, key string) {
-	msg := tgbotapi.NewMessage(update.CallbackQuery.Message.Chat.ID, "Игра началась")
-	msg.ReplyMarkup = CreateFieldMarkUp(assets.Games[key].PlayingField, assets.Games[key].OpenedButtonsField, key)
+func NewSapperGame(callback *tgbotapi.CallbackQuery, bot *tgbotapi.BotAPI, key string) {
+	msg := tgbotapi.NewMessage(callback.Message.Chat.ID, "Игра началась")
+	msg.ReplyMarkup = CreateFieldMarkUp(assets.Games[key], key)
 	msgData, err := bot.Send(msg)
 	if err != nil {
 		log.Println(err)
@@ -47,12 +47,14 @@ func generateKey() string {
 	return key
 }
 
-func GenerateField(size int) string { //TODO: pay attention to the code of this function
+func GenerateField(size int, bombCounter int) string {
 	key := generateKey()
 	game := &models.Game{
-		Size: size,
+		Size:        size,
+		BombCounter: bombCounter,
 	}
 	game.FillEmptyField()
 	game.FillField()
+	assets.Games[key] = game
 	return key
 }

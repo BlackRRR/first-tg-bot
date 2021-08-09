@@ -1,8 +1,10 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"github.com/BlackRRR/first-tg-bot/assets"
+	"github.com/BlackRRR/first-tg-bot/database"
 	"github.com/BlackRRR/first-tg-bot/game_logic"
 	"log"
 	"math/rand"
@@ -74,11 +76,12 @@ func SendWorkIsUnderWayCallBack(CallbackId string, bot *tgbotapi.BotAPI) { // tr
 }
 
 func checkUpdate(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
+	printUpdate(update)
 	if update.Message != nil {
 
-		//db := database.DBConn()
-		//_, username := database.GetAllData(db)
-		//CheckUsersFromDB(username)
+		db := database.DBConn()
+		users := database.GetAllData(db)
+		CheckUsersFromDB(users)
 		//database.AddDB(db,update.Message.From.ID,update.Message.From.UserName)
 
 		if assets.DeveloperMode && update.Message.From.ID != AdminId {
@@ -110,14 +113,23 @@ func checkUpdate(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
 			return
 		}
 
-		game_logic.ActionWithCallback(update, bot)
+		game_logic.ActionWithCallback(update.CallbackQuery, bot)
 		assets.SavingGame()
 		return
 	}
 }
 
+func printUpdate(update *tgbotapi.Update) {
+	updateData, err := json.MarshalIndent(update, "", "  ")
+	if err != nil {
+		log.Println(err)
+	}
+
+	log.Println(string(updateData))
+}
+
 func CreateAdminButtons(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
-	msg := tgbotapi.NewMessage(update.Message.Chat.ID, "/admin")
+	msg := tgbotapi.NewMessage(update.Message.Chat.ID, "Панель администратора ⚙️")
 	msg.ReplyMarkup = tgbotapi.NewInlineKeyboardMarkup(
 		tgbotapi.NewInlineKeyboardRow(
 			tgbotapi.NewInlineKeyboardButtonData("Отправить всем сообщение о старте бота", "start")),
@@ -130,8 +142,14 @@ func CreateAdminButtons(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
 	}
 }
 
-func CheckUsersFromDB(userName []string) {
-	for i := range userName {
-		fmt.Println(userName[i])
+func CheckUsersFromDB(users []database.User) {
+	var user database.User
+	for i := range users {
+		user = users[i]
+		fmt.Println(user.UserID)
 	}
+}
+
+func SendMsgAll(userID int, bot *tgbotapi.BotAPI) {
+
 }

@@ -54,16 +54,17 @@ func Counter(key string) int {
 	return counter
 }
 
-func ReEditField(update *tgbotapi.Update, bot *tgbotapi.BotAPI, key string) {
+func ReEditField(callback *tgbotapi.CallbackQuery, bot *tgbotapi.BotAPI, key string) {
 	//Size := Games[key].Size
 	assets.Games[key] = &models.Game{
-		Size: assets.Games[key].Size,
+		Size:        assets.Games[key].Size,
+		BombCounter: assets.Games[key].BombCounter,
 	}
 
 	assets.Games[key].FillEmptyField()
 	assets.Games[key].FillField()
-	ReplyMarkup := CreateFieldMarkUp(assets.Games[key].PlayingField, assets.Games[key].OpenedButtonsField, key)
-	msg := tgbotapi.NewEditMessageReplyMarkup(update.CallbackQuery.Message.Chat.ID, update.CallbackQuery.Message.MessageID, ReplyMarkup)
+	ReplyMarkup := CreateFieldMarkUp(assets.Games[key], key)
+	msg := tgbotapi.NewEditMessageReplyMarkup(callback.Message.Chat.ID, callback.Message.MessageID, ReplyMarkup)
 	if _, err := bot.Send(msg); err != nil {
 		log.Println(err)
 	}

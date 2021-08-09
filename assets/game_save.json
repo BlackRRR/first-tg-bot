@@ -3,7 +3,8 @@
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "06yoq9vNSQZlBgiB": {
     "PlayingField": [
@@ -171,7 +172,8 @@
       ]
     ],
     "MessageID": 656,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "0Y5SPdrEBbu8Mm7u": {
     "PlayingField": [
@@ -339,19 +341,127 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
+  },
+  "0a3duBQAohMwecaj": {
+    "PlayingField": [
+      [
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        " "
+      ],
+      [
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        " "
+      ],
+      [
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        " "
+      ],
+      [
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        " "
+      ],
+      [
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        " "
+      ],
+      [
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        " "
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    ],
+    "MessageID": 0,
+    "Size": 6,
+    "BombCounter": 0
   },
   "0e59Bft2bBayc1aR": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "1F2OGUyIL63mOSXC": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "1ODKsTPb1KO24IGq": {
     "PlayingField": [
@@ -519,7 +629,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "1SXFzZ4VBH41jQui": {
     "PlayingField": [
@@ -687,7 +798,8 @@
       ]
     ],
     "MessageID": 640,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "1jFTNnhpZ3VBpBbE": {
     "PlayingField": [
@@ -821,7 +933,8 @@
       ]
     ],
     "MessageID": 1033,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "1rl7skOPgv0vPqV7": {
     "PlayingField": [
@@ -899,25 +1012,29 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "2IfpkTR1y5goj6oq": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "2Xc5TFQTmyRA29tx": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "2wZiO1S9o34HH0Oz": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "3BY11gr8KHVS77BJ": {
     "PlayingField": [
@@ -1051,7 +1168,8 @@
       ]
     ],
     "MessageID": 1120,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "3MnjLPg3faMwXKoA": {
     "PlayingField": [
@@ -1129,7 +1247,8 @@
       ]
     ],
     "MessageID": 834,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "3VztBK8KzX7BB2kY": {
     "PlayingField": [
@@ -1263,7 +1382,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "3yJKZGlP8eOkviX2": {
     "PlayingField": [
@@ -1469,7 +1589,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "4fmoDgUDtbFJe2i5": {
     "PlayingField": [
@@ -1573,7 +1694,8 @@
       ]
     ],
     "MessageID": 1310,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "4uyvbXU12NofiDaI": {
     "PlayingField": [
@@ -1651,13 +1773,15 @@
       ]
     ],
     "MessageID": 1285,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "5UBjhzF0L8RLbMsV": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "5ilEZqALpNhvstTB": {
     "PlayingField": [
@@ -1735,7 +1859,8 @@
       ]
     ],
     "MessageID": 1295,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "5msNDUMSNDIX3SsQ": {
     "PlayingField": [
@@ -1903,7 +2028,8 @@
       ]
     ],
     "MessageID": 637,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "6KLvpINNHSm1pi27": {
     "PlayingField": [
@@ -2071,31 +2197,36 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "6PfIiOmX9wmB1gug": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "6Rw1R8i3DFYFbv80": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "6WyvPwXjUgDncFwt": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "70d65LzgkvUjwHR4": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "74TPmGLgE34I1kxd": {
     "PlayingField": [
@@ -2173,7 +2304,8 @@
       ]
     ],
     "MessageID": 809,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "7ffNsBJlTtsg5YW2": {
     "PlayingField": [
@@ -2251,7 +2383,8 @@
       ]
     ],
     "MessageID": 1181,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "8VmC6B88shSHqT1W": {
     "PlayingField": [
@@ -2419,25 +2552,29 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "9Cs0iYhbUIBQFtUY": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "9t9Da3JIvtfGgBcf": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "A2SI9j9AIEY11KPi": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "AEuH3L4Llx8HCTWv": {
     "PlayingField": [
@@ -2605,19 +2742,22 @@
       ]
     ],
     "MessageID": 1313,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "AYAs8yEpcAzqIxj3": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "AwwNBujq6O6GntkN": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "B9cZpYuo4AUsHvEx": {
     "PlayingField": [
@@ -2785,7 +2925,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 8
+    "Size": 8,
+    "BombCounter": 0
   },
   "BG0RZy2XiDKPxv9e": {
     "PlayingField": [
@@ -2953,7 +3094,143 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
+  },
+  "BvJn5168S8cgBjG9": {
+    "PlayingField": [
+      [
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        " "
+      ],
+      [
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        " "
+      ],
+      [
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        " "
+      ],
+      [
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        " "
+      ],
+      [
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        " "
+      ],
+      [
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        " "
+      ],
+      [
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        " "
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    ],
+    "MessageID": 0,
+    "Size": 7,
+    "BombCounter": 0
   },
   "C5ycWhYV8QxoNpnf": {
     "PlayingField": [
@@ -3031,13 +3308,15 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "Cp9Q5eXuFSl04xK0": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "CqVeyqF8nshHYaQd": {
     "PlayingField": [
@@ -3141,7 +3420,8 @@
       ]
     ],
     "MessageID": 1377,
-    "Size": 6
+    "Size": 6,
+    "BombCounter": 0
   },
   "CsmkvoZWnmEKASNY": {
     "PlayingField": [
@@ -3219,7 +3499,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "CxtMdrXGuTcw4wMh": {
     "PlayingField": [
@@ -3387,7 +3668,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "DkIS03rpygJGf8Af": {
     "PlayingField": [
@@ -3555,7 +3837,8 @@
       ]
     ],
     "MessageID": 5,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "DrcNm4r62ePIIkqF": {
     "PlayingField": [
@@ -3723,7 +4006,8 @@
       ]
     ],
     "MessageID": 695,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "DtFcmHCsQcJpgwXA": {
     "PlayingField": [
@@ -3827,7 +4111,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "DyWVDEucwBsmjAS0": {
     "PlayingField": [
@@ -3995,7 +4280,8 @@
       ]
     ],
     "MessageID": 1240,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "E4PTkA8YHjug2Fdd": {
     "PlayingField": [
@@ -4129,7 +4415,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "ECmqpAje0vOHU2HN": {
     "PlayingField": [
@@ -4335,7 +4622,8 @@
       ]
     ],
     "MessageID": 1064,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "EUQSMwg1nAhGfaO8": {
     "PlayingField": [
@@ -4541,7 +4829,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "EXHHeYbtTkGEagWW": {
     "PlayingField": [
@@ -4645,7 +4934,8 @@
       ]
     ],
     "MessageID": 1119,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "Edm7vNh3QyPp2izO": {
     "PlayingField": [
@@ -4779,7 +5069,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "Ef7FeIaJR3SWBLBO": {
     "PlayingField": [
@@ -4857,7 +5148,8 @@
       ]
     ],
     "MessageID": 1370,
-    "Size": 5
+    "Size": 5,
+    "BombCounter": 0
   },
   "EjBuN1yULLyrYdNM": {
     "PlayingField": [
@@ -4935,7 +5227,8 @@
       ]
     ],
     "MessageID": 1184,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "F8vvNwf7mUd04Qf5": {
     "PlayingField": [
@@ -5013,7 +5306,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 5
+    "Size": 5,
+    "BombCounter": 0
   },
   "FShtOzEmQuPB46TM": {
     "PlayingField": [
@@ -5091,7 +5385,8 @@
       ]
     ],
     "MessageID": 1178,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "FohYsUxknYPoaXsL": {
     "PlayingField": [
@@ -5297,7 +5592,8 @@
       ]
     ],
     "MessageID": 1036,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "FpHimXQSC1uTcwNY": {
     "PlayingField": [
@@ -5465,13 +5761,15 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "FqPLC1ezLSCvVydP": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "FrBNPU2tKUe5uU20": {
     "PlayingField": [
@@ -5549,13 +5847,15 @@
       ]
     ],
     "MessageID": 1092,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "GWoM9aqtCBDk94JG": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "GfOvR2EksE2y6WnV": {
     "PlayingField": [
@@ -5633,7 +5933,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "GwKmU4O4pgNCN98E": {
     "PlayingField": [
@@ -5767,7 +6068,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "H2o9mBFiKO8Jve0i": {
     "PlayingField": [
@@ -5845,7 +6147,8 @@
       ]
     ],
     "MessageID": 1078,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "HcxGFbKjEcrGGgUt": {
     "PlayingField": [
@@ -5949,7 +6252,87 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
+  },
+  "JBPhpfEBj8q0Xlyk": {
+    "PlayingField": [
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "2",
+        "2",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "bomb",
+        "bomb",
+        "2",
+        "1",
+        "0"
+      ],
+      [
+        "3",
+        "5",
+        "bomb",
+        "2",
+        "0"
+      ],
+      [
+        "1",
+        "bomb",
+        "bomb",
+        "2",
+        "0"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      [
+        false,
+        false,
+        true,
+        true,
+        true
+      ],
+      [
+        false,
+        false,
+        false,
+        true,
+        true
+      ],
+      [
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    ],
+    "MessageID": 0,
+    "Size": 5,
+    "BombCounter": 5
   },
   "JCJCgAQWBbNI7dkV": {
     "PlayingField": [
@@ -6027,13 +6410,15 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 5
+    "Size": 5,
+    "BombCounter": 0
   },
   "K7LqvAONnNmKFoT8": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "KA05JZKuD8EwJrsl": {
     "PlayingField": [
@@ -6111,7 +6496,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "LNuNNpVqk2xKuuV8": {
     "PlayingField": [
@@ -6279,7 +6665,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "LiGl09q14op1R4LA": {
     "PlayingField": [
@@ -6357,19 +6744,127 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "Ly7Pc9f1LVrjxNX5": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
+  },
+  "Mn64U6Ha52mFR2n8": {
+    "PlayingField": [
+      [
+        "bomb",
+        "1",
+        "0",
+        "0",
+        "1",
+        "1"
+      ],
+      [
+        "1",
+        "1",
+        "0",
+        "0",
+        "1",
+        "bomb"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "1",
+        "1"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "1",
+        "2",
+        "1"
+      ],
+      [
+        "1",
+        "1",
+        "3",
+        "bomb",
+        "3",
+        "bomb"
+      ],
+      [
+        "1",
+        "bomb",
+        "3",
+        "bomb",
+        "3",
+        "1"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        false,
+        true,
+        true,
+        true,
+        true,
+        false
+      ],
+      [
+        true,
+        true,
+        true,
+        true,
+        true,
+        false
+      ],
+      [
+        true,
+        true,
+        true,
+        true,
+        true,
+        false
+      ],
+      [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      [
+        true,
+        true,
+        true,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    ],
+    "MessageID": 0,
+    "Size": 6,
+    "BombCounter": 6
   },
   "NbrkyPFSIVdhF0bx": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "NiteGg9jTt8dPRYH": {
     "PlayingField": [
@@ -6537,7 +7032,8 @@
       ]
     ],
     "MessageID": 1252,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "NqfIFp7bfkzfYHXX": {
     "PlayingField": [
@@ -6615,7 +7111,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "NqwuChWhMIhk9a7I": {
     "PlayingField": [
@@ -6783,13 +7280,15 @@
       ]
     ],
     "MessageID": 1250,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "O4bj9wvOlNqCkbGQ": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "OA2JIpc1j1u6lv71": {
     "PlayingField": [
@@ -6957,7 +7456,8 @@
       ]
     ],
     "MessageID": 641,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "OClCOvnQNHru7dAP": {
     "PlayingField": [
@@ -7061,7 +7561,8 @@
       ]
     ],
     "MessageID": 1035,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "OTef1aUFhREeiniG": {
     "PlayingField": [
@@ -7229,13 +7730,15 @@
       ]
     ],
     "MessageID": 692,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "OW2uRK5I47RPcH2A": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "PCijoA7OQYa51fDW": {
     "PlayingField": [
@@ -7403,7 +7906,8 @@
       ]
     ],
     "MessageID": 1261,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "PWMMyNrcpKYVsCuz": {
     "PlayingField": [
@@ -7481,7 +7985,8 @@
       ]
     ],
     "MessageID": 837,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "QFvl3ifFnjla1Cey": {
     "PlayingField": [
@@ -7559,7 +8064,8 @@
       ]
     ],
     "MessageID": 1189,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "QRuOevkjioJitGwU": {
     "PlayingField": [
@@ -7807,19 +8313,22 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "QytKLS5u5usYFJ6v": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "RBGwyQMmBtup8uQu": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "RK47o1lDeDLcXbHj": {
     "PlayingField": [
@@ -7897,13 +8406,15 @@
       ]
     ],
     "MessageID": 1107,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "RvhRGxFP7S2vUbvC": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "S1Lyh7NVtWMzy8E9": {
     "PlayingField": [
@@ -7981,7 +8492,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "SD0RMv1svydmgvR7": {
     "PlayingField": [
@@ -8149,7 +8661,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "SYq4D6kB9ET7jLL6": {
     "PlayingField": [
@@ -8397,13 +8910,150 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "SZup1ZNy40CjX62c": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
+  },
+  "Uydu4DOzqUGcYEFy": {
+    "PlayingField": [
+      [
+        "0",
+        "1",
+        "1",
+        "2",
+        "bomb",
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "bomb",
+        "2",
+        "1",
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "2",
+        "2",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "bomb",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "2",
+        "3",
+        "3",
+        "2"
+      ],
+      [
+        "0",
+        "1",
+        "1",
+        "2",
+        "bomb",
+        "bomb",
+        "bomb"
+      ],
+      [
+        "0",
+        "1",
+        "bomb",
+        "2",
+        "2",
+        "3",
+        "2"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        true,
+        true,
+        true,
+        true,
+        false,
+        false,
+        false
+      ],
+      [
+        true,
+        true,
+        false,
+        true,
+        true,
+        false,
+        false
+      ],
+      [
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      [
+        true,
+        true,
+        true,
+        false,
+        true,
+        false,
+        false
+      ],
+      [
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    ],
+    "MessageID": 0,
+    "Size": 7,
+    "BombCounter": 7
   },
   "V7HODX5AQVbL33xc": {
     "PlayingField": [
@@ -8481,7 +9131,8 @@
       ]
     ],
     "MessageID": 1279,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "VUUOP48AMwYGUI8x": {
     "PlayingField": [
@@ -8649,7 +9300,87 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
+  },
+  "VegkDZYFjcfICAHI": {
+    "PlayingField": [
+      [
+        "1",
+        "1",
+        "2",
+        "1",
+        "1"
+      ],
+      [
+        "2",
+        "bomb",
+        "3",
+        "bomb",
+        "1"
+      ],
+      [
+        "2",
+        "bomb",
+        "3",
+        "1",
+        "1"
+      ],
+      [
+        "2",
+        "2",
+        "1",
+        "1",
+        "1"
+      ],
+      [
+        "bomb",
+        "1",
+        "0",
+        "1",
+        "bomb"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    ],
+    "MessageID": 1500,
+    "Size": 5,
+    "BombCounter": 5
   },
   "VnSa1SurAJadkU70": {
     "PlayingField": [
@@ -8817,7 +9548,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "VykXly00AjxO0Ejs": {
     "PlayingField": [
@@ -8895,7 +9627,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "WA1fudVBJGxmmsYR": {
     "PlayingField": [
@@ -8973,19 +9706,22 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "WcDzDYmNu6TK0RvX": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "WhmY4BAF43TrfsEm": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "WsHOhMRDBoJ368EE": {
     "PlayingField": [
@@ -9153,7 +9889,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "XRM5MQagjfjffPBS": {
     "PlayingField": [
@@ -9231,13 +9968,15 @@
       ]
     ],
     "MessageID": 957,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "XT0c1ncWW79Zjui4": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "XbIoxKJYsx4BZMjt": {
     "PlayingField": [
@@ -9315,7 +10054,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "Xo2j9Ds6BGJwfNL8": {
     "PlayingField": [
@@ -9483,25 +10223,29 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "YU5Dj29EeSd7UEry": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "YbeLfJT9mdlH82CZ": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "Yjpwh3GsKubaWdlH": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "YlMrDjFoq92aFmVN": {
     "PlayingField": [
@@ -9707,7 +10451,8 @@
       ]
     ],
     "MessageID": 951,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "Z3f9m1szcspjQeu7": {
     "PlayingField": [
@@ -9785,7 +10530,8 @@
       ]
     ],
     "MessageID": 1289,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "ZDYjmuOwMPvccxYs": {
     "PlayingField": [
@@ -9863,7 +10609,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "ZnqLZbffDqPF6lA8": {
     "PlayingField": [
@@ -10031,7 +10778,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "ZqDnBv4VMj67GRdP": {
     "PlayingField": [
@@ -10109,7 +10857,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "aHlQhfyIg4VnfkRX": {
     "PlayingField": [
@@ -10277,7 +11026,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "aKKeIi0B2xdnPt1e": {
     "PlayingField": [
@@ -10445,7 +11195,8 @@
       ]
     ],
     "MessageID": 683,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "ag9M100IMkSmLZDP": {
     "PlayingField": [
@@ -10549,13 +11300,15 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "avb7s1M5GU7jdKSP": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "bgjGpw68gmc3Zyj8": {
     "PlayingField": [
@@ -10723,7 +11476,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "c25gzulWMAlFtP15": {
     "PlayingField": [
@@ -10891,25 +11645,29 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "cFvGd65FbvNYr4ku": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "ch2PGtW7uqp4ZjXa": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "dD24ErYUindtAWY0": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "dqA2F0CfnGixTVW6": {
     "PlayingField": [
@@ -10987,7 +11745,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "eULHDDzn3J8ggnav": {
     "PlayingField": [
@@ -11065,7 +11824,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "eel0WUEZvajv6tAn": {
     "PlayingField": [
@@ -11169,7 +11929,8 @@
       ]
     ],
     "MessageID": 1472,
-    "Size": 6
+    "Size": 6,
+    "BombCounter": 0
   },
   "ex6TCSv9OCxUZyCT": {
     "PlayingField": [
@@ -11337,7 +12098,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "fIc64LcHPMxKP6Dl": {
     "PlayingField": [
@@ -11441,13 +12203,15 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 6
+    "Size": 6,
+    "BombCounter": 0
   },
   "fOfMjzamQ1kBsxG6": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "g0sBFJjtLv06y7AA": {
     "PlayingField": [
@@ -11525,7 +12289,8 @@
       ]
     ],
     "MessageID": 1170,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "g3U71vWRRkXR10Da": {
     "PlayingField": [
@@ -11693,7 +12458,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "g3wwN2B3ra1Pmo2o": {
     "PlayingField": [
@@ -11771,7 +12537,8 @@
       ]
     ],
     "MessageID": 789,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "hKruyuBOHc6egaBx": {
     "PlayingField": [
@@ -11939,19 +12706,22 @@
       ]
     ],
     "MessageID": 1121,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "hQ4tykEPr7h05dWZ": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "i39yuXtq6nBUC1Mj": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "irH1jaaCVkf8br6d": {
     "PlayingField": [
@@ -12119,7 +12889,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "iyJcZBpMUimuQfSn": {
     "PlayingField": [
@@ -12287,7 +13058,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "jz249Dobc3ll8PdL": {
     "PlayingField": [
@@ -12391,7 +13163,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "kHXVOHS4wWF4kYgM": {
     "PlayingField": [
@@ -12559,13 +13332,15 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "kgmXQjZD8Jb2VdOy": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "kkYOKI4HHRhnOhf3": {
     "PlayingField": [
@@ -12733,7 +13508,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "l3sIRYYrUnWlAATQ": {
     "PlayingField": [
@@ -12811,19 +13587,22 @@
       ]
     ],
     "MessageID": 1118,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "lIttLq0WLjCy4YmJ": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "mNr87bzxv5QsD8g4": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "mYfowkTs3JSZCvRQ": {
     "PlayingField": [
@@ -12991,7 +13770,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "mfDM5e1U8AcSs2k3": {
     "PlayingField": [
@@ -13069,7 +13849,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "mkDAAuEnRaGmR8Jk": {
     "PlayingField": [
@@ -13203,7 +13984,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "naqM9NUDLwYb7G0M": {
     "PlayingField": [
@@ -13371,7 +14153,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "nke7JvRqqNr6JTiB": {
     "PlayingField": [
@@ -13449,19 +14232,22 @@
       ]
     ],
     "MessageID": 1085,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "ny1NMourKcTdtYw7": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "oO3aCVleB7qYDd1c": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "oYJbBxhj0RH82OSj": {
     "PlayingField": [
@@ -13539,13 +14325,15 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "ohIBRX1ZoGPLmuDy": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "oxAuxMCqzqIBNtMJ": {
     "PlayingField": [
@@ -13713,7 +14501,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "pQ0bqpy6amfIIafm": {
     "PlayingField": [
@@ -13791,13 +14580,15 @@
       ]
     ],
     "MessageID": 775,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "q6KhO62srTHKViZI": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "rGP1nWBm8qw03T5F": {
     "PlayingField": [
@@ -13965,7 +14756,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "sFAbL3EkXkvHPI9a": {
     "PlayingField": [
@@ -14133,7 +14925,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "sNgj8EADicDfxAje": {
     "PlayingField": [
@@ -14301,7 +15094,8 @@
       ]
     ],
     "MessageID": 1034,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "smmkkIj7c5HdsJGm": {
     "PlayingField": [
@@ -14405,13 +15199,15 @@
       ]
     ],
     "MessageID": 717,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "sx0TgOSjMhIDZYk1": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "t7n68quAMUIwp9Iu": {
     "PlayingField": [
@@ -14545,7 +15341,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "tK2Xk0QlTF7kP90U": {
     "PlayingField": [
@@ -14623,13 +15420,15 @@
       ]
     ],
     "MessageID": 815,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "tNbgrTjymkdaPk9t": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "trcUCLVIYtc4LZKx": {
     "PlayingField": [
@@ -14797,7 +15596,8 @@
       ]
     ],
     "MessageID": 1248,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "uMG0DW7uZjPhIzC5": {
     "PlayingField": [
@@ -14965,7 +15765,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "ulbYXXyOnDd9FZYw": {
     "PlayingField": [
@@ -15069,13 +15870,15 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "vIfeCALq892XPJS5": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "vWNZEZraLSVJLk5F": {
     "PlayingField": [
@@ -15243,7 +16046,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 8
+    "Size": 8,
+    "BombCounter": 0
   },
   "vv9RHGmGBYqoaMnc": {
     "PlayingField": [
@@ -15347,13 +16151,15 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "vzYcGC9jWEJuUMNg": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "wEZfgwbuTKsEZJ14": {
     "PlayingField": [
@@ -15431,7 +16237,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "xOk31K1VvkImrt3g": {
     "PlayingField": [
@@ -15509,7 +16316,8 @@
       ]
     ],
     "MessageID": 1100,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "xPNUcdjJBAeQf8aV": {
     "PlayingField": [
@@ -15587,7 +16395,8 @@
       ]
     ],
     "MessageID": 821,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "xqOKkaSH4JvXZuJ6": {
     "PlayingField": [
@@ -15665,7 +16474,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "y0sNUaFUzo0NJPul": {
     "PlayingField": [
@@ -15743,7 +16553,8 @@
       ]
     ],
     "MessageID": 1298,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "yF8K55YtrAzvUHq5": {
     "PlayingField": [
@@ -15911,7 +16722,8 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "yLG9f6HqgJqHOxNH": {
     "PlayingField": [
@@ -16079,31 +16891,115 @@
       ]
     ],
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "yYABcM5bWPHwMjJv": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "yccbPS9TuoU9Iplb": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
+  },
+  "ypzER2HigUey3O4K": {
+    "PlayingField": [
+      [
+        " ",
+        " ",
+        " ",
+        " ",
+        " "
+      ],
+      [
+        " ",
+        " ",
+        " ",
+        " ",
+        " "
+      ],
+      [
+        " ",
+        " ",
+        " ",
+        " ",
+        " "
+      ],
+      [
+        " ",
+        " ",
+        " ",
+        " ",
+        " "
+      ],
+      [
+        " ",
+        " ",
+        " ",
+        " ",
+        " "
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    ],
+    "MessageID": 0,
+    "Size": 5,
+    "BombCounter": 0
   },
   "z19I48bjaK0IXrHi": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "z2GTlfSZOjXd80NK": {
     "PlayingField": null,
     "OpenedButtonsField": null,
     "MessageID": 0,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   },
   "zEExZj91tnlvPS8D": {
     "PlayingField": [
@@ -16207,7 +17103,8 @@
       ]
     ],
     "MessageID": 1406,
-    "Size": 6
+    "Size": 6,
+    "BombCounter": 0
   },
   "zPtCrvVQXTj560Vk": {
     "PlayingField": [
@@ -16285,6 +17182,7 @@
       ]
     ],
     "MessageID": 714,
-    "Size": 0
+    "Size": 0,
+    "BombCounter": 0
   }
 }
