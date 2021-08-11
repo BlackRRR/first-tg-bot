@@ -1,7 +1,9 @@
 package game_logic
 
 import (
+	"fmt"
 	"github.com/BlackRRR/first-tg-bot/assets"
+	"github.com/BlackRRR/first-tg-bot/database"
 	"github.com/BlackRRR/first-tg-bot/models"
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api"
 	"log"
@@ -9,9 +11,11 @@ import (
 	"strings"
 )
 
-func ActionWithCallback(callback *tgbotapi.CallbackQuery, bot *tgbotapi.BotAPI) {
+func ActionWithCallback(callback *tgbotapi.CallbackQuery, bot *tgbotapi.BotAPI, users []database.User) {
 	switch callback.Data {
 	case "start":
+		SendAdminBotStart(callback.ID, bot, callback.From.ID)
+		database.CheckUsersFromDBAndSendMsg(users, bot)
 		return
 	case "turn on":
 		CheckDeveloperMode(callback, bot, true)
@@ -23,12 +27,16 @@ func ActionWithCallback(callback *tgbotapi.CallbackQuery, bot *tgbotapi.BotAPI) 
 		TakeCallBackFieldSize(callback, bot, callback.Data)
 		return
 	default:
-		HandlingGameLogic(callback, bot)
+		HandlingGameLogic(callback, bot, users)
 	}
 }
 
-func HandlingGameLogic(callback *tgbotapi.CallbackQuery, bot *tgbotapi.BotAPI) {
+func HandlingGameLogic(callback *tgbotapi.CallbackQuery, bot *tgbotapi.BotAPI, users []database.User) {
 	key, i, j := DataSplit(callback.Data)
+
+	if assets.Games[key] == nil {
+		SendGameOver(callback, bot)
+	}
 
 	if _, exist := assets.Games[key]; !exist {
 		return
@@ -40,7 +48,7 @@ func HandlingGameLogic(callback *tgbotapi.CallbackQuery, bot *tgbotapi.BotAPI) {
 
 	if assets.Games[key].PlayingField[i][j] != "0" && Counter(key) == 0 {
 		ReEditField(callback, bot, key)
-		ActionWithCallback(callback, bot)
+		ActionWithCallback(callback, bot, users)
 		return
 	}
 
@@ -103,7 +111,8 @@ func ActionsWithBombUpdate(i, j int, key string, callback *tgbotapi.CallbackQuer
 	assets.Games[key] = &models.Game{
 		Size: assets.Games[key].Size,
 	}
-	assets.Games[key].FillEmptyField()
+
+	delete(assets.Games, key)
 }
 
 func ActionsWithWin(key string, callback *tgbotapi.CallbackQuery, bot *tgbotapi.BotAPI) {
@@ -122,18 +131,21 @@ func ActionsWithWin(key string, callback *tgbotapi.CallbackQuery, bot *tgbotapi.
 	assets.Games[key] = &models.Game{
 		Size: assets.Games[key].Size,
 	}
-	assets.Games[key].FillEmptyField()
+
+	delete(assets.Games, key)
+	fmt.Println(assets.Games[key])
 }
 
-func CheckDeveloperMode(update *tgbotapi.Update, bot *tgbotapi.BotAPI, developerMode bool) {
+func CheckDeveloperMode(callback *tgbotapi.CallbackQuery, bot *tgbotapi.BotAPI, developerMode bool) {
+	assets.DeveloperMode = developerMode
 	if developerMode {
-		msg := tgbotapi.NewMessage(update.CallbackQuery.Message.Chat.ID, "Режим Администрации включен")
+		msg := tgbotapi.NewMessage(callback.Message.Chat.ID, "Режим Администрации включен")
 		_, err := bot.Send(msg)
 		if err != nil {
 			log.Println(err)
 		}
 	} else {
-		msg := tgbotapi.NewMessage(update.CallbackQuery.Message.Chat.ID, "Режим Администрации выключен")
+		msg := tgbotapi.NewMessage(callback.Message.Chat.ID, "Режим Администрации выключен")
 		_, err := bot.Send(msg)
 		if err != nil {
 			log.Println(err)
@@ -154,6 +166,23 @@ func CallEditMessage(key string, CallbackChatID int64, CallbackMsgID int, bot *t
 	msg := tgbotapi.NewEditMessageReplyMarkup(CallbackChatID, CallbackMsgID, ReplyMarkup)
 
 	if _, err := bot.Send(msg); err != nil {
+		log.Println(err)
+	}
+}
+
+func SendAdminBotStart(callbackID string, bot *tgbotapi.BotAPI, UserID int) {
+	assets.DeveloperMode = false
+	if UserID == assets.AdminId {
+		msg := tgbotapi.NewCallback(callbackID, "Бот запущен, режим администрации выключен")
+		if _, err := bot.AnswerCallbackQuery(msg); err != nil {
+			log.Println(err)
+		}
+	}
+}
+
+func SendGameOver(callBack *tgbotapi.CallbackQuery, bot *tgbotapi.BotAPI) {
+	msg := tgbotapi.NewCallback(callBack.ID, "Игра завершена")
+	if _, err := bot.AnswerCallbackQuery(msg); err != nil {
 		log.Println(err)
 	}
 }

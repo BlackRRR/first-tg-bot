@@ -1,52 +1,34 @@
 package database
 
 import (
-	"encoding/json"
-	"fmt"
-	"github.com/BlackRRR/first-tg-bot/assets"
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api"
 	"log"
-	"os"
 )
 
-const DataSavePath = "database/database.json"
-
-type Database struct {
-	UserID int
-	Name   string
+func CheckUsersFromDBAndSendMsg(users []User, bot *tgbotapi.BotAPI) {
+	var user User
+	for i := range users {
+		user = users[i]
+		SendMsgAll(user.UserID, bot)
+	}
 }
 
-type Users struct {
-	Users []Database
+func SendMsgAll(userID int64, bot *tgbotapi.BotAPI) {
+	msg := tgbotapi.NewMessage(userID, "Бот запущен \U0001F973, напишите /sapper чтобы начать игру")
+	_, err := bot.Send(msg)
+	if err != nil {
+		log.Println(err)
+	}
 }
 
-func DataSave(update *tgbotapi.Update) {
-	dataIn, err := os.ReadFile(assets.GamesSavePath)
-	if err != nil {
-		fmt.Println(err)
+func CheckIdenticalValues(update *tgbotapi.Update, users []User) bool {
+	var user User
+	var flag = true
+	for i := range users {
+		user = users[i]
+		if user.UserID == update.Message.Chat.ID {
+			flag = false
+		}
 	}
-
-	var users Users
-
-	err = json.Unmarshal(dataIn, &users)
-	if err != nil {
-		fmt.Println(err)
-	}
-
-	data := Database{
-		UserID: update.Message.From.ID,
-		Name:   update.Message.From.UserName,
-	}
-
-	users.Users = append(users.Users, data)
-
-	dataSave, err := json.MarshalIndent(&users, "", "  ")
-	if err != nil {
-		log.Fatalln(err)
-	}
-
-	err = os.WriteFile(DataSavePath, dataSave, 0600)
-	if err != nil {
-		log.Fatalln(err)
-	}
+	return flag
 }

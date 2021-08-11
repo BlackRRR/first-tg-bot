@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
 	"github.com/BlackRRR/first-tg-bot/assets"
 	"github.com/BlackRRR/first-tg-bot/database"
 	"github.com/BlackRRR/first-tg-bot/game_logic"
@@ -12,11 +11,6 @@ import (
 	"time"
 
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api"
-)
-
-const (
-	AdminId       = 872383555
-	AdminUserName = "BlackR0_0"
 )
 
 func main() {
@@ -59,7 +53,7 @@ func actionsWithUpdates(updates tgbotapi.UpdatesChannel, bot *tgbotapi.BotAPI) {
 	}
 }
 
-func SendWorkIsUnderWayMsg(ChatId int64, bot *tgbotapi.BotAPI) { // rename to ...UnderWayMsg; : you don't need to pass the whole update here, just pass the chatId here
+func SendWorkIsUnderWayMsg(ChatId int64, bot *tgbotapi.BotAPI) {
 	msg := tgbotapi.NewMessage(ChatId, "Ведуться работы...")
 	if _, err := bot.Send(msg); err != nil {
 		log.Println(err)
@@ -67,7 +61,7 @@ func SendWorkIsUnderWayMsg(ChatId int64, bot *tgbotapi.BotAPI) { // rename to ..
 	return
 }
 
-func SendWorkIsUnderWayCallBack(CallbackId string, bot *tgbotapi.BotAPI) { // transmit only the chatId
+func SendWorkIsUnderWayCallBack(CallbackId string, bot *tgbotapi.BotAPI) {
 	msg := tgbotapi.NewCallback(CallbackId, "Ведуться работы...")
 	if _, err := bot.AnswerCallbackQuery(msg); err != nil {
 		log.Println(err)
@@ -76,15 +70,15 @@ func SendWorkIsUnderWayCallBack(CallbackId string, bot *tgbotapi.BotAPI) { // tr
 }
 
 func checkUpdate(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
-	printUpdate(update)
+	db := database.DBConn()
+	users := database.GetAllData(db)
 	if update.Message != nil {
+		flag := database.CheckIdenticalValues(update, users)
+		if flag {
+			database.AddUser(db, update.Message.Chat.ID, update.Message.From.UserName)
+		}
 
-		db := database.DBConn()
-		users := database.GetAllData(db)
-		CheckUsersFromDB(users)
-		//database.AddDB(db,update.Message.From.ID,update.Message.From.UserName)
-
-		if assets.DeveloperMode && update.Message.From.ID != AdminId {
+		if assets.DeveloperMode && update.Message.From.ID != assets.AdminId {
 			SendWorkIsUnderWayMsg(update.Message.Chat.ID, bot)
 			return
 		}
@@ -94,7 +88,7 @@ func checkUpdate(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
 			game_logic.TakeFieldSize(update, bot)
 			return
 		case "admin":
-			if update.Message.From.ID == AdminId {
+			if update.Message.From.ID == assets.AdminId {
 				CreateAdminButtons(update, bot)
 				return
 			}
@@ -108,12 +102,12 @@ func checkUpdate(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
 	}
 
 	if update.CallbackQuery != nil {
-		if assets.DeveloperMode && update.CallbackQuery.From.ID != AdminId {
+		if assets.DeveloperMode && update.CallbackQuery.From.ID != assets.AdminId {
 			SendWorkIsUnderWayCallBack(update.CallbackQuery.ID, bot)
 			return
 		}
 
-		game_logic.ActionWithCallback(update.CallbackQuery, bot)
+		game_logic.ActionWithCallback(update.CallbackQuery, bot, users)
 		assets.SavingGame()
 		return
 	}
@@ -140,16 +134,4 @@ func CreateAdminButtons(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
 	if _, err := bot.Send(msg); err != nil {
 		log.Println(err)
 	}
-}
-
-func CheckUsersFromDB(users []database.User) {
-	var user database.User
-	for i := range users {
-		user = users[i]
-		fmt.Println(user.UserID)
-	}
-}
-
-func SendMsgAll(userID int, bot *tgbotapi.BotAPI) {
-
 }

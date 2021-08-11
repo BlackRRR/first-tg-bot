@@ -42,6 +42,7 @@ func OpenAllBombsAfterWin(key string) {
 		}
 	}
 }
+
 func Counter(key string) int {
 	var counter int
 	for i := 0; i < assets.Games[key].Size; i++ {
@@ -55,7 +56,6 @@ func Counter(key string) int {
 }
 
 func ReEditField(callback *tgbotapi.CallbackQuery, bot *tgbotapi.BotAPI, key string) {
-	//Size := Games[key].Size
 	assets.Games[key] = &models.Game{
 		Size:        assets.Games[key].Size,
 		BombCounter: assets.Games[key].BombCounter,
@@ -86,7 +86,4 @@ func printOpenField(field [][]bool, key string) {
 		}
 		fmt.Println()
 	}
-}
-
-func SendMsgAll(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
 }

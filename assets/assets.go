@@ -10,6 +10,8 @@ import (
 
 const (
 	GamesSavePath = "assets/game_save.json"
+	AdminId       = 872383555
+	AdminUserName = "BlackR0_0"
 )
 
 var (

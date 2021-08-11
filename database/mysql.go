@@ -2,14 +2,13 @@ package database
 
 import (
 	"database/sql"
-	"fmt"
 	"github.com/BlackRRR/first-tg-bot/cfg"
 	_ "github.com/go-sql-driver/mysql"
 	"log"
 )
 
 type User struct {
-	UserID   int
+	UserID   int64
 	UserName string
 }
 
@@ -21,7 +20,7 @@ func DBConn() *sql.DB {
 	return db
 }
 
-func AddUser(db *sql.DB, userID int, userName string) {
+func AddUser(db *sql.DB, userID int64, userName string) {
 	insert, err := db.Prepare("INSERT INTO users (user_id, user_name) VALUES (?,?)")
 	if err != nil {
 		log.Print(err)
@@ -35,7 +34,7 @@ func AddUser(db *sql.DB, userID int, userName string) {
 	defer db.Close()
 }
 
-func GetAllData(db *sql.DB) (Users []User) { // you have an array of users that already contains UserName, why pass them separately?
+func GetAllData(db *sql.DB) (Users []User) {
 	resp, err := db.Query("SELECT * FROM users")
 	if err != nil {
 		log.Println(err)
@@ -52,6 +51,5 @@ func GetAllData(db *sql.DB) (Users []User) { // you have an array of users that 
 
 		Users = append(Users, user)
 	}
-	fmt.Println(Users)
 	return Users
 }
