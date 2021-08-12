@@ -5,6 +5,8 @@ import (
 	"github.com/BlackRRR/first-tg-bot/assets"
 	"github.com/BlackRRR/first-tg-bot/database"
 	"github.com/BlackRRR/first-tg-bot/game_logic"
+	"github.com/BlackRRR/first-tg-bot/language"
+	"github.com/BlackRRR/first-tg-bot/top"
 	"log"
 	"math/rand"
 	"os"
@@ -48,13 +50,14 @@ func takeBotToken() string {
 }
 
 func actionsWithUpdates(updates tgbotapi.UpdatesChannel, bot *tgbotapi.BotAPI) {
+	language.LangParsing()
 	for update := range updates {
 		checkUpdate(&update, bot)
 	}
 }
 
 func SendWorkIsUnderWayMsg(ChatId int64, bot *tgbotapi.BotAPI) {
-	msg := tgbotapi.NewMessage(ChatId, "Ведуться работы...")
+	msg := tgbotapi.NewMessage(ChatId, language.LangText(language.UserLang.Language, "conducting_work"))
 	if _, err := bot.Send(msg); err != nil {
 		log.Println(err)
 	}
@@ -62,7 +65,7 @@ func SendWorkIsUnderWayMsg(ChatId int64, bot *tgbotapi.BotAPI) {
 }
 
 func SendWorkIsUnderWayCallBack(CallbackId string, bot *tgbotapi.BotAPI) {
-	msg := tgbotapi.NewCallback(CallbackId, "Ведуться работы...")
+	msg := tgbotapi.NewCallback(CallbackId, language.LangText(language.UserLang.Language, "conducting_work"))
 	if _, err := bot.AnswerCallbackQuery(msg); err != nil {
 		log.Println(err)
 	}
@@ -70,12 +73,21 @@ func SendWorkIsUnderWayCallBack(CallbackId string, bot *tgbotapi.BotAPI) {
 }
 
 func checkUpdate(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
+	if !language.LangChange {
+		language.GenerateLanguage()
+	}
+
 	db := database.DBConn()
 	users := database.GetAllData(db)
 	if update.Message != nil {
+
 		flag := database.CheckIdenticalValues(update, users)
 		if flag {
-			database.AddUser(db, update.Message.Chat.ID, update.Message.From.UserName)
+			database.AddUser(db, update.Message.Chat.ID, update.Message.From.UserName, update.Message.From.LanguageCode)
+		}
+
+		if !language.LangChange {
+			language.ReturnLanguage(update.Message.From.LanguageCode)
 		}
 
 		if assets.DeveloperMode && update.Message.From.ID != assets.AdminId {
@@ -92,9 +104,15 @@ func checkUpdate(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
 				CreateAdminButtons(update, bot)
 				return
 			}
+		case "language":
+			language.TakeLanguage(update.Message.Chat.ID, bot)
+			return
+		case "top":
+			top.CreateTop(users, update, bot)
+			return
 		}
 
-		msg := tgbotapi.NewMessage(update.Message.Chat.ID, "Нажмите /sapper чтобы начать игру")
+		msg := tgbotapi.NewMessage(update.Message.Chat.ID, language.LangText(language.UserLang.Language, "start_game"))
 		if _, err := bot.Send(msg); err != nil {
 			log.Println(err)
 		}
@@ -107,7 +125,7 @@ func checkUpdate(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
 			return
 		}
 
-		game_logic.ActionWithCallback(update.CallbackQuery, bot, users)
+		game_logic.ActionWithCallback(update.CallbackQuery, bot, users, db)
 		assets.SavingGame()
 		return
 	}
@@ -123,13 +141,13 @@ func printUpdate(update *tgbotapi.Update) {
 }
 
 func CreateAdminButtons(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
-	msg := tgbotapi.NewMessage(update.Message.Chat.ID, "Панель администратора ⚙️")
+	msg := tgbotapi.NewMessage(update.Message.Chat.ID, language.LangText(language.UserLang.Language, "admin_Panel"))
 	msg.ReplyMarkup = tgbotapi.NewInlineKeyboardMarkup(
 		tgbotapi.NewInlineKeyboardRow(
-			tgbotapi.NewInlineKeyboardButtonData("Отправить всем сообщение о старте бота", "start")),
+			tgbotapi.NewInlineKeyboardButtonData(language.LangText(language.UserLang.Language, "send_all_start"), "start")),
 		tgbotapi.NewInlineKeyboardRow(
-			tgbotapi.NewInlineKeyboardButtonData("Включить Режим Администратора", "turn on"),
-			tgbotapi.NewInlineKeyboardButtonData("Вылючить Режим Администратора", "turn off"),
+			tgbotapi.NewInlineKeyboardButtonData(language.LangText(language.UserLang.Language, "turning_administrator_mode_on"), "turn on"),
+			tgbotapi.NewInlineKeyboardButtonData(language.LangText(language.UserLang.Language, "turning_administrator_mode_off"), "turn off"),
 		))
 	if _, err := bot.Send(msg); err != nil {
 		log.Println(err)

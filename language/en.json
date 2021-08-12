@@ -1,0 +1,22 @@
+{
+  "admin_Panel": "admin Panel ⚙️",
+  "start_game": "/sapper - start the game\n/language - select a language",
+  "conducting_work": "Old works...",
+  "send_all_start": "Send all the message on start bot",
+  "turning_administrator_mode_on": "Enable Admin Mode",
+  "turning_administrator_mode_off": "velocity to Administrator Mode",
+  "bot_started_press_sapper": "Bot is running \u0001F973, write /sapper to start the game",
+  "you_lost": "You lose\nwrite /sapper for a new game",
+  "you_win": "You won hit /sapper to start a new game",
+  "administrator_mode_on": "Administration Mode is enabled",
+  "administrator_mode_off": "Administration Mode turned off",
+  "bot_started_admin_mode_off": "the Bot is running, the mode of administration off",
+  "game_over": "Game ended",
+  "take_field_size": "Select the field size",
+  "game_started": "The game has started",
+  "select_language" : "Select language",
+  "russian" : "Russian",
+  "english" : "English",
+  "you_take_russian" : "Ваш язык русский",
+  "you_take_english" : "Your language english"
+}

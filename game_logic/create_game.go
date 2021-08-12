@@ -2,6 +2,7 @@ package game_logic
 
 import (
 	"github.com/BlackRRR/first-tg-bot/assets"
+	"github.com/BlackRRR/first-tg-bot/language"
 	"github.com/BlackRRR/first-tg-bot/models"
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api"
 	"log"
@@ -14,7 +15,7 @@ const (
 )
 
 func TakeFieldSize(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
-	msg := tgbotapi.NewMessage(update.Message.Chat.ID, "Выберите размер поля")
+	msg := tgbotapi.NewMessage(update.Message.Chat.ID, language.LangText(language.UserLang.Language, "take_field_size"))
 	msg.ReplyMarkup = tgbotapi.NewInlineKeyboardMarkup(
 		tgbotapi.NewInlineKeyboardRow(
 			tgbotapi.NewInlineKeyboardButtonData("5X5", "5"),
@@ -28,7 +29,7 @@ func TakeFieldSize(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
 }
 
 func NewSapperGame(callback *tgbotapi.CallbackQuery, bot *tgbotapi.BotAPI, key string) {
-	msg := tgbotapi.NewMessage(callback.Message.Chat.ID, "Игра началась")
+	msg := tgbotapi.NewMessage(callback.Message.Chat.ID, language.LangText(language.UserLang.Language, "game_started"))
 	msg.ReplyMarkup = CreateFieldMarkUp(assets.Games[key], key)
 	msgData, err := bot.Send(msg)
 	if err != nil {

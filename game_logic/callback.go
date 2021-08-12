@@ -1,9 +1,10 @@
 package game_logic
 
 import (
-	"fmt"
+	"database/sql"
 	"github.com/BlackRRR/first-tg-bot/assets"
 	"github.com/BlackRRR/first-tg-bot/database"
+	"github.com/BlackRRR/first-tg-bot/language"
 	"github.com/BlackRRR/first-tg-bot/models"
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api"
 	"log"
@@ -11,7 +12,7 @@ import (
 	"strings"
 )
 
-func ActionWithCallback(callback *tgbotapi.CallbackQuery, bot *tgbotapi.BotAPI, users []database.User) {
+func ActionWithCallback(callback *tgbotapi.CallbackQuery, bot *tgbotapi.BotAPI, users []database.User, db *sql.DB) {
 	switch callback.Data {
 	case "start":
 		SendAdminBotStart(callback.ID, bot, callback.From.ID)
@@ -26,12 +27,18 @@ func ActionWithCallback(callback *tgbotapi.CallbackQuery, bot *tgbotapi.BotAPI, 
 	case "5", "6", "7", "8":
 		TakeCallBackFieldSize(callback, bot, callback.Data)
 		return
+	case "ru":
+		language.ReturnLanguage("ru")
+		SendMsgLanguage(callback, bot, "ru")
+	case "en":
+		language.ReturnLanguage("en")
+		SendMsgLanguage(callback, bot, "en")
 	default:
-		HandlingGameLogic(callback, bot, users)
+		HandlingGameLogic(callback, bot, users, db)
 	}
 }
 
-func HandlingGameLogic(callback *tgbotapi.CallbackQuery, bot *tgbotapi.BotAPI, users []database.User) {
+func HandlingGameLogic(callback *tgbotapi.CallbackQuery, bot *tgbotapi.BotAPI, users []database.User, db *sql.DB) {
 	key, i, j := DataSplit(callback.Data)
 
 	if assets.Games[key] == nil {
@@ -48,7 +55,7 @@ func HandlingGameLogic(callback *tgbotapi.CallbackQuery, bot *tgbotapi.BotAPI, u
 
 	if assets.Games[key].PlayingField[i][j] != "0" && Counter(key) == 0 {
 		ReEditField(callback, bot, key)
-		ActionWithCallback(callback, bot, users)
+		ActionWithCallback(callback, bot, users, db)
 		return
 	}
 
@@ -63,13 +70,13 @@ func HandlingGameLogic(callback *tgbotapi.CallbackQuery, bot *tgbotapi.BotAPI, u
 		OpenZero(i, j, key)
 	case "bomb":
 		OpenAllBombsAfterWin(key)
-		ActionsWithBombUpdate(i, j, key, callback, bot)
+		ActionsWithBombUpdate(i, j, key, callback, bot, db)
 		return
 	}
 
 	if Counter(key) == assets.Games[key].Size*assets.Games[key].Size-assets.Games[key].BombCounter {
 		OpenAllBombsAfterWin(key)
-		ActionsWithWin(key, callback, bot)
+		ActionsWithWin(key, callback, bot, db)
 		return
 	}
 
@@ -92,8 +99,8 @@ func TakeCallBackFieldSize(callback *tgbotapi.CallbackQuery, bot *tgbotapi.BotAP
 	assets.SavingGame()
 }
 
-func ActionsWithBombUpdate(i, j int, key string, callback *tgbotapi.CallbackQuery, bot *tgbotapi.BotAPI) {
-	msg := tgbotapi.NewMessage(callback.Message.Chat.ID, "Вы проиграли\nнапишите /sapper для новой игры")
+func ActionsWithBombUpdate(i, j int, key string, callback *tgbotapi.CallbackQuery, bot *tgbotapi.BotAPI, db *sql.DB) {
+	msg := tgbotapi.NewMessage(callback.Message.Chat.ID, language.LangText(language.UserLang.Language, "you_lost"))
 
 	assets.Games[key].OpenedButtonsField[i][j] = true
 
@@ -113,10 +120,13 @@ func ActionsWithBombUpdate(i, j int, key string, callback *tgbotapi.CallbackQuer
 	}
 
 	delete(assets.Games, key)
+	database.RatioChange.Losses += 1
+	database.RatioChange.Ratio = float64(database.RatioChange.Wins / database.RatioChange.Losses)
+	database.UpdateTable(db, database.RatioChange.Wins, database.RatioChange.Losses, database.RatioChange.Ratio, callback.Message.From.ID)
 }
 
-func ActionsWithWin(key string, callback *tgbotapi.CallbackQuery, bot *tgbotapi.BotAPI) {
-	msg := tgbotapi.NewMessage(callback.Message.Chat.ID, "Вы выйграли нажмите /sapper чтобы начать новую игру")
+func ActionsWithWin(key string, callback *tgbotapi.CallbackQuery, bot *tgbotapi.BotAPI, db *sql.DB) {
+	msg := tgbotapi.NewMessage(callback.Message.Chat.ID, language.LangText(language.UserLang.Language, "you_win"))
 	ReplyMarkup := CreateFieldMarkUp(assets.Games[key], key)
 	msgAboutBomb := tgbotapi.NewEditMessageReplyMarkup(callback.Message.Chat.ID, callback.Message.MessageID, ReplyMarkup)
 
@@ -133,19 +143,21 @@ func ActionsWithWin(key string, callback *tgbotapi.CallbackQuery, bot *tgbotapi.
 	}
 
 	delete(assets.Games, key)
-	fmt.Println(assets.Games[key])
+	database.RatioChange.Wins += 1
+	database.RatioChange.Ratio = float64(database.RatioChange.Wins / database.RatioChange.Losses)
+	database.UpdateTable(db, database.RatioChange.Wins, database.RatioChange.Losses, database.RatioChange.Ratio, callback.Message.From.ID)
 }
 
 func CheckDeveloperMode(callback *tgbotapi.CallbackQuery, bot *tgbotapi.BotAPI, developerMode bool) {
 	assets.DeveloperMode = developerMode
 	if developerMode {
-		msg := tgbotapi.NewMessage(callback.Message.Chat.ID, "Режим Администрации включен")
+		msg := tgbotapi.NewMessage(callback.Message.Chat.ID, language.LangText(language.UserLang.Language, "administrator_mode_on"))
 		_, err := bot.Send(msg)
 		if err != nil {
 			log.Println(err)
 		}
 	} else {
-		msg := tgbotapi.NewMessage(callback.Message.Chat.ID, "Режим Администрации выключен")
+		msg := tgbotapi.NewMessage(callback.Message.Chat.ID, language.LangText(language.UserLang.Language, "administrator_mode_off"))
 		_, err := bot.Send(msg)
 		if err != nil {
 			log.Println(err)
@@ -173,7 +185,7 @@ func CallEditMessage(key string, CallbackChatID int64, CallbackMsgID int, bot *t
 func SendAdminBotStart(callbackID string, bot *tgbotapi.BotAPI, UserID int) {
 	assets.DeveloperMode = false
 	if UserID == assets.AdminId {
-		msg := tgbotapi.NewCallback(callbackID, "Бот запущен, режим администрации выключен")
+		msg := tgbotapi.NewCallback(callbackID, language.LangText(language.UserLang.Language, "bot_started_admin_mode_off"))
 		if _, err := bot.AnswerCallbackQuery(msg); err != nil {
 			log.Println(err)
 		}
@@ -181,8 +193,23 @@ func SendAdminBotStart(callbackID string, bot *tgbotapi.BotAPI, UserID int) {
 }
 
 func SendGameOver(callBack *tgbotapi.CallbackQuery, bot *tgbotapi.BotAPI) {
-	msg := tgbotapi.NewCallback(callBack.ID, "Игра завершена")
+	msg := tgbotapi.NewCallback(callBack.ID, language.LangText(language.UserLang.Language, "game_over"))
 	if _, err := bot.AnswerCallbackQuery(msg); err != nil {
+		log.Println(err)
+	}
+}
+
+func SendMsgLanguage(callback *tgbotapi.CallbackQuery, bot *tgbotapi.BotAPI, lang string) {
+	language.LangChange = true
+	if lang == "ru" {
+		msg := tgbotapi.NewMessage(callback.Message.Chat.ID, language.LangText(lang, "you_take_russian"))
+		if _, err := bot.Send(msg); err != nil {
+			log.Println(err)
+		}
+		return
+	}
+	msg := tgbotapi.NewMessage(callback.Message.Chat.ID, language.LangText(lang, "you_take_english"))
+	if _, err := bot.Send(msg); err != nil {
 		log.Println(err)
 	}
 }

@@ -1,0 +1,22 @@
+{
+  "admin_Panel": "Панель администратора ⚙️",
+  "start_game": "/sapper - начать игру\n/language - выбрать язык",
+  "conducting_work": "Ведуться работы...",
+  "send_all_start": "Отправить всем сообщение о старте бота",
+  "turning_administrator_mode_on": "Включить Режим Администратора",
+  "turning_administrator_mode_off": "Вылючить Режим Администратора",
+  "bot_started_press_sapper": "Бот запущен \u0001F973, напишите /sapper чтобы начать игру",
+  "you_lost": "Вы проиграли\nнапишите /sapper для новой игры",
+  "you_win": "Вы выйграли нажмите /sapper чтобы начать новую игру",
+  "administrator_mode_on": "Режим Администрации включен",
+  "administrator_mode_off": "Режим Администрации выключен",
+  "bot_started_admin_mode_off": "Бот запущен, режим администрации выключен",
+  "game_over": "Игра завершена",
+  "take_field_size": "Выберите размер поля",
+  "game_started": "Игра началась",
+  "select_language" : "Выберите язык",
+  "russian" : "Русский",
+  "english" : "Английский",
+  "you_take_russian" : "Ваш язык русский",
+  "you_take_english" : "Your language english"
+}
