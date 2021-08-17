@@ -28,6 +28,6 @@
   "hard" : "Hard",
   "open_flag" : "Click on any cell of the field",
   "already_flag": "There is a flag",
-  "rules" : "---------------------------------Game rules---------------------------------\nAt the beginning of the game, the player has closed square fields. Some of these fields hide mines, and some do not. The player's task is to determine under which field the mine is hidden and mark these fields. The player must also open those fields where there are no mines. If a player opens a field with a mine, he loses. If a player opens a field without a mine, a number appears indicating how many mines are in eight adjacent fields. Based on these numbers, the player must determine where the mines are located. The goal of the game is to find all the mines by opening fields in which there are no mines.",
+  "rules" : "------------------Game rules------------------\nAt the beginning of the game, the player has closed square fields. Some of these fields hide mines, and some do not. The player's task is to determine under which field the mine is hidden and mark these fields. The player must also open those fields where there are no mines. If a player opens a field with a mine, he loses. If a player opens a field without a mine, a number appears indicating how many mines are in eight adjacent fields. Based on these numbers, the player must determine where the mines are located. The goal of the game is to find all the mines by opening fields in which there are no mines.",
   "out_of_flag": "The flags are over"
 }

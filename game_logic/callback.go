@@ -2,6 +2,7 @@ package game_logic
 
 import (
 	"database/sql"
+	"fmt"
 	"github.com/BlackRRR/first-tg-bot/assets"
 	"github.com/BlackRRR/first-tg-bot/database"
 	"github.com/BlackRRR/first-tg-bot/language"
@@ -103,9 +104,10 @@ func HandlingGameLogic(callback *tgbotapi.CallbackQuery, bot *tgbotapi.BotAPI, u
 
 	if assets.Games[key].PlayingField[i][j] == "bomb" && Counter(key) == 0 {
 		assets.Games[key].Flag = "false"
-		assets.Games[key].FlagCounter = models.FlagCounter
+		fmt.Println(assets.Games[key].FlagCounter)
 		ReEditField(callback, bot, key)
 		ActionWithCallback(callback, bot, users, db)
+		assets.Games[key].FlagCounter = models.FlagCounter
 		ReEditForFlags(callback, bot, key)
 		return
 	}
