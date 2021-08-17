@@ -36,6 +36,10 @@ func createButton(game *models.Game, i, j int, key string) tgbotapi.InlineKeyboa
 	counter := Counter(key)
 	data = key + "/" + strconv.Itoa(i) + "/" + strconv.Itoa(j)
 
+	if counter == assets.Games[key].Size*assets.Games[key].Size && assets.Games[key].PlayingField[i][j] == "bomb" {
+		return tgbotapi.NewInlineKeyboardButtonData("😍", data)
+	}
+
 	if game.OpenedButtonsField[i][j] == "❌" {
 		return tgbotapi.NewInlineKeyboardButtonData("❌", data)
 	}
@@ -52,9 +56,6 @@ func createButton(game *models.Game, i, j int, key string) tgbotapi.InlineKeyboa
 		return tgbotapi.NewInlineKeyboardButtonData(game.PlayingField[i][j], data)
 	}
 
-	if counter == assets.Games[key].Size*assets.Games[key].Size {
-		return tgbotapi.NewInlineKeyboardButtonData("😍", data)
-	}
 	return tgbotapi.NewInlineKeyboardButtonData("💣", data)
 }
 
