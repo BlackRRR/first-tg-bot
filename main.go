@@ -6,6 +6,7 @@ import (
 	"github.com/BlackRRR/first-tg-bot/database"
 	"github.com/BlackRRR/first-tg-bot/game_logic"
 	"github.com/BlackRRR/first-tg-bot/language"
+	"github.com/BlackRRR/first-tg-bot/msgs"
 	"github.com/BlackRRR/first-tg-bot/top"
 	"log"
 	"math/rand"
@@ -42,6 +43,7 @@ func startBot() (*tgbotapi.BotAPI, tgbotapi.UpdatesChannel) {
 	log.Println("The bot is running")
 
 	return bot, updates
+
 }
 
 func takeBotToken() string {
@@ -56,22 +58,6 @@ func actionsWithUpdates(updates tgbotapi.UpdatesChannel, bot *tgbotapi.BotAPI) {
 	}
 }
 
-func SendWorkIsUnderWayMsg(ChatId int64, bot *tgbotapi.BotAPI) {
-	msg := tgbotapi.NewMessage(ChatId, language.LangText(language.UserLang.Language, "conducting_work"))
-	if _, err := bot.Send(msg); err != nil {
-		log.Println(err)
-	}
-	return
-}
-
-func SendWorkIsUnderWayCallBack(CallbackId string, bot *tgbotapi.BotAPI) {
-	msg := tgbotapi.NewCallback(CallbackId, language.LangText(language.UserLang.Language, "conducting_work"))
-	if _, err := bot.AnswerCallbackQuery(msg); err != nil {
-		log.Println(err)
-	}
-	return
-}
-
 func checkUpdate(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
 	if !language.LangChange {
 		language.GenerateLanguage()
@@ -79,6 +65,7 @@ func checkUpdate(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
 
 	db := database.DBConn()
 	users := database.GetAllData(db)
+
 	if update.Message != nil {
 
 		flag := database.CheckIdenticalValues(update, users)
@@ -90,14 +77,18 @@ func checkUpdate(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
 			language.ReturnLanguage(update.Message.From.LanguageCode)
 		}
 
+		if database.RatioChange == nil {
+			database.AddRatio(users, update.Message.Chat.ID)
+		}
+
 		if assets.DeveloperMode && update.Message.From.ID != assets.AdminId {
-			SendWorkIsUnderWayMsg(update.Message.Chat.ID, bot)
+			msgs.SendWorkIsUnderWayMsg(update.Message.Chat.ID, bot)
 			return
 		}
 
 		switch update.Message.Command() {
 		case "sapper":
-			game_logic.TakeFieldSize(update, bot)
+			msgs.SelectDifficultGame(update, bot)
 			return
 		case "admin":
 			if update.Message.From.ID == assets.AdminId {
@@ -105,10 +96,13 @@ func checkUpdate(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
 				return
 			}
 		case "language":
-			language.TakeLanguage(update.Message.Chat.ID, bot)
+			msgs.TakeLanguage(update.Message.Chat.ID, bot)
 			return
 		case "top":
 			top.CreateTop(users, update, bot)
+			return
+		case "rules":
+			msgs.Rules(update, bot)
 			return
 		}
 
@@ -121,7 +115,7 @@ func checkUpdate(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
 
 	if update.CallbackQuery != nil {
 		if assets.DeveloperMode && update.CallbackQuery.From.ID != assets.AdminId {
-			SendWorkIsUnderWayCallBack(update.CallbackQuery.ID, bot)
+			msgs.SendWorkIsUnderWayCallBack(update.CallbackQuery.ID, bot)
 			return
 		}
 

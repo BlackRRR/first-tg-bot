@@ -6,6 +6,7 @@ import (
 	"github.com/BlackRRR/first-tg-bot/database"
 	"github.com/BlackRRR/first-tg-bot/language"
 	"github.com/BlackRRR/first-tg-bot/models"
+	"github.com/BlackRRR/first-tg-bot/msgs"
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api"
 	"log"
 	"strconv"
@@ -17,32 +18,79 @@ func ActionWithCallback(callback *tgbotapi.CallbackQuery, bot *tgbotapi.BotAPI, 
 	case "start":
 		SendAdminBotStart(callback.ID, bot, callback.From.ID)
 		database.CheckUsersFromDBAndSendMsg(users, bot)
-		return
 	case "turn on":
 		CheckDeveloperMode(callback, bot, true)
-		return
 	case "turn off":
 		CheckDeveloperMode(callback, bot, false)
-		return
 	case "5", "6", "7", "8":
-		TakeCallBackFieldSize(callback, bot, callback.Data)
-		return
+		TakeCallBackFieldSize(callback, bot, callback.Data, models.Level)
 	case "ru":
 		language.ReturnLanguage("ru")
 		SendMsgLanguage(callback, bot, "ru")
 	case "en":
 		language.ReturnLanguage("en")
 		SendMsgLanguage(callback, bot, "en")
+	case "easy":
+		ReturnLevelGameSendMsg("easy", callback.ID, bot)
+		TakeFieldSize(callback, bot)
+	case "medium":
+		ReturnLevelGameSendMsg("medium", callback.ID, bot)
+		TakeFieldSize(callback, bot)
+	case "hard":
+		ReturnLevelGameSendMsg("hard", callback.ID, bot)
+		TakeFieldSize(callback, bot)
 	default:
 		HandlingGameLogic(callback, bot, users, db)
 	}
 }
 
 func HandlingGameLogic(callback *tgbotapi.CallbackQuery, bot *tgbotapi.BotAPI, users []database.User, db *sql.DB) {
+
 	key, i, j := DataSplit(callback.Data)
 
 	if assets.Games[key] == nil {
 		SendGameOver(callback, bot)
+		return
+	}
+
+	if assets.Games[key].FlagCounter == 0 && assets.Games[key].Flag == "true" && i != assets.Games[key].Size+1 {
+		msgs.MsgOutOfFlag(callback.ID, bot)
+		return
+	}
+
+	if i == assets.Games[key].Size+1 && assets.Games[key].Flag == "false" {
+		assets.Games[key].Flag = "true"
+		ReEditForFlags(callback, bot, key)
+		return
+	}
+
+	if assets.Games[key].Flag == "true" && i == assets.Games[key].Size+1 {
+		assets.Games[key].Flag = "false"
+		ReEditForFlags(callback, bot, key)
+		return
+	}
+
+	if assets.Games[key].Flag == "true" && assets.Games[key].OpenedButtonsField[i][j] == "flag" {
+		if assets.Games[key].FlagCounter != models.FlagCounter {
+			assets.Games[key].FlagCounter += 1
+		}
+		assets.Games[key].OpenedButtonsField[i][j] = "false"
+		ReEditForFlags(callback, bot, key)
+		return
+	}
+
+	if i != assets.Games[key].Size+1 && assets.Games[key].Flag == "true" {
+		if assets.Games[key].FlagCounter != 0 {
+			assets.Games[key].FlagCounter -= 1
+		}
+		assets.Games[key].OpenedButtonsField[i][j] = "flag"
+		ReEditForFlags(callback, bot, key)
+		return
+	}
+
+	if i == assets.Games[key].Size+1 && assets.Games[key].Flag == "" {
+		msgs.MsgClickAnyCell(callback.ID, bot)
+		return
 	}
 
 	if _, exist := assets.Games[key]; !exist {
@@ -53,17 +101,25 @@ func HandlingGameLogic(callback *tgbotapi.CallbackQuery, bot *tgbotapi.BotAPI, u
 		return
 	}
 
-	if assets.Games[key].PlayingField[i][j] != "0" && Counter(key) == 0 {
+	if assets.Games[key].PlayingField[i][j] == "bomb" && Counter(key) == 0 {
+		assets.Games[key].Flag = "false"
+		assets.Games[key].FlagCounter = models.FlagCounter
 		ReEditField(callback, bot, key)
 		ActionWithCallback(callback, bot, users, db)
+		ReEditForFlags(callback, bot, key)
 		return
 	}
 
-	if assets.Games[key].OpenedButtonsField[i][j] {
+	if assets.Games[key].OpenedButtonsField[i][j] == "true" {
 		return
 	}
 
-	assets.Games[key].OpenedButtonsField[i][j] = true
+	if assets.Games[key].OpenedButtonsField[i][j] == "flag" {
+		msgs.MsgFlag(callback.ID, bot)
+		return
+	}
+
+	assets.Games[key].OpenedButtonsField[i][j] = "true"
 
 	switch assets.Games[key].PlayingField[i][j] {
 	case "0":
@@ -80,20 +136,74 @@ func HandlingGameLogic(callback *tgbotapi.CallbackQuery, bot *tgbotapi.BotAPI, u
 		return
 	}
 
+	if Counter(key) == 0 {
+		assets.Games[key].FlagCounter = models.FlagCounter
+	}
+
+	assets.Games[key].Flag = "false"
 	CallEditMessage(key, callback.Message.Chat.ID, callback.Message.MessageID, bot)
 
 }
 
-func TakeCallBackFieldSize(callback *tgbotapi.CallbackQuery, bot *tgbotapi.BotAPI, size string) {
-	bombCounter := map[int]int{
-		5: 5,
-		6: 6,
-		7: 8,
-		8: 12,
-	}
+func TakeCallBackFieldSize(callback *tgbotapi.CallbackQuery, bot *tgbotapi.BotAPI, size string, level map[int]int) {
+
+	bombCounter := level
 
 	intSize, _ := strconv.Atoi(size)
 	key := GenerateField(intSize, bombCounter[intSize])
+
+	switch models.Difficult {
+	case "easy":
+		switch size {
+		case "5":
+			assets.Games[key].FlagCounter = 15
+			models.FlagCounter = assets.Games[key].FlagCounter
+		case "6":
+			assets.Games[key].FlagCounter = 20
+			models.FlagCounter = assets.Games[key].FlagCounter
+		case "7":
+			assets.Games[key].FlagCounter = 25
+			models.FlagCounter = assets.Games[key].FlagCounter
+		case "8":
+			assets.Games[key].FlagCounter = 35
+			models.FlagCounter = assets.Games[key].FlagCounter
+		}
+	case "medium":
+		switch size {
+		case "5":
+			assets.Games[key].FlagCounter = 10
+			models.FlagCounter = assets.Games[key].FlagCounter
+		case "6":
+			assets.Games[key].FlagCounter = 12
+			models.FlagCounter = assets.Games[key].FlagCounter
+		case "7":
+			assets.Games[key].FlagCounter = 15
+			models.FlagCounter = assets.Games[key].FlagCounter
+		case "8":
+			assets.Games[key].FlagCounter = 18
+			models.FlagCounter = assets.Games[key].FlagCounter
+		}
+	case "hard":
+		switch size {
+		case "5":
+			assets.Games[key].FlagCounter = 10
+			models.FlagCounter = assets.Games[key].FlagCounter
+		case "6":
+			assets.Games[key].FlagCounter = 12
+			models.FlagCounter = assets.Games[key].FlagCounter
+		case "7":
+			assets.Games[key].FlagCounter = 16
+			models.FlagCounter = assets.Games[key].FlagCounter
+		case "8":
+			assets.Games[key].FlagCounter = 20
+			models.FlagCounter = assets.Games[key].FlagCounter
+		}
+	}
+
+	msg := tgbotapi.NewCallback(callback.ID, size+"X"+size)
+	if _, err := bot.AnswerCallbackQuery(msg); err != nil {
+		log.Println(err)
+	}
 
 	NewSapperGame(callback, bot, key)
 	assets.SavingGame()
@@ -102,7 +212,7 @@ func TakeCallBackFieldSize(callback *tgbotapi.CallbackQuery, bot *tgbotapi.BotAP
 func ActionsWithBombUpdate(i, j int, key string, callback *tgbotapi.CallbackQuery, bot *tgbotapi.BotAPI, db *sql.DB) {
 	msg := tgbotapi.NewMessage(callback.Message.Chat.ID, language.LangText(language.UserLang.Language, "you_lost"))
 
-	assets.Games[key].OpenedButtonsField[i][j] = true
+	assets.Games[key].OpenedButtonsField[i][j] = "true"
 
 	ReplyMarkup := CreateFieldMarkUp(assets.Games[key], key)
 	msgAboutBomb := tgbotapi.NewEditMessageReplyMarkup(callback.Message.Chat.ID, callback.Message.MessageID, ReplyMarkup)
@@ -121,8 +231,8 @@ func ActionsWithBombUpdate(i, j int, key string, callback *tgbotapi.CallbackQuer
 
 	delete(assets.Games, key)
 	database.RatioChange.Losses += 1
-	database.RatioChange.Ratio = float64(database.RatioChange.Wins / database.RatioChange.Losses)
-	database.UpdateTable(db, database.RatioChange.Wins, database.RatioChange.Losses, database.RatioChange.Ratio, callback.Message.From.ID)
+	database.RatioChange.Ratio = float64(database.RatioChange.Wins) / float64(database.RatioChange.Losses)
+	database.UpdateTable(db, database.RatioChange.Wins, database.RatioChange.Losses, database.RatioChange.Ratio, callback.Message.Chat.ID)
 }
 
 func ActionsWithWin(key string, callback *tgbotapi.CallbackQuery, bot *tgbotapi.BotAPI, db *sql.DB) {
@@ -144,8 +254,8 @@ func ActionsWithWin(key string, callback *tgbotapi.CallbackQuery, bot *tgbotapi.
 
 	delete(assets.Games, key)
 	database.RatioChange.Wins += 1
-	database.RatioChange.Ratio = float64(database.RatioChange.Wins / database.RatioChange.Losses)
-	database.UpdateTable(db, database.RatioChange.Wins, database.RatioChange.Losses, database.RatioChange.Ratio, callback.Message.From.ID)
+	database.RatioChange.Ratio = float64(database.RatioChange.Wins) / float64(database.RatioChange.Losses)
+	database.UpdateTable(db, database.RatioChange.Wins, database.RatioChange.Losses, database.RatioChange.Ratio, callback.Message.Chat.ID)
 }
 
 func CheckDeveloperMode(callback *tgbotapi.CallbackQuery, bot *tgbotapi.BotAPI, developerMode bool) {
@@ -174,10 +284,11 @@ func DataSplit(callbackData string) (key string, i, j int) {
 }
 
 func CallEditMessage(key string, CallbackChatID int64, CallbackMsgID int, bot *tgbotapi.BotAPI) {
-	ReplyMarkup := CreateFieldMarkUp(assets.Games[key], key)
-	msg := tgbotapi.NewEditMessageReplyMarkup(CallbackChatID, CallbackMsgID, ReplyMarkup)
 
-	if _, err := bot.Send(msg); err != nil {
+	ReplyMarkup := CreateFieldMarkUp(assets.Games[key], key)
+	msgMark := tgbotapi.NewEditMessageReplyMarkup(CallbackChatID, CallbackMsgID, ReplyMarkup)
+
+	if _, err := bot.Send(msgMark); err != nil {
 		log.Println(err)
 	}
 }
@@ -212,4 +323,26 @@ func SendMsgLanguage(callback *tgbotapi.CallbackQuery, bot *tgbotapi.BotAPI, lan
 	if _, err := bot.Send(msg); err != nil {
 		log.Println(err)
 	}
+}
+
+func ReturnLevelGameSendMsg(difficult string, callbackID string, bot *tgbotapi.BotAPI) {
+	var Text string
+	models.Difficult = difficult
+	switch difficult {
+	case "easy":
+		models.Level = map[int]int{5: 4, 6: 4, 7: 6, 8: 9}
+		Text = language.LangText(language.UserLang.Language, "easy")
+	case "medium":
+		models.Level = map[int]int{5: 7, 6: 9, 7: 12, 8: 15}
+		Text = language.LangText(language.UserLang.Language, "medium")
+	case "hard":
+		models.Level = map[int]int{5: 10, 6: 12, 7: 16, 8: 20}
+		Text = language.LangText(language.UserLang.Language, "hard")
+	}
+
+	msg := tgbotapi.NewCallback(callbackID, Text)
+	if _, err := bot.AnswerCallbackQuery(msg); err != nil {
+		log.Println(err)
+	}
+	return
 }

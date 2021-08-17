@@ -78,11 +78,12 @@ func GetAllData(db *sql.DB) (Users []User) {
 	return Users
 }
 
-func UpdateTable(db *sql.DB, wins int, loss int, ratio float64, userID int) {
-	update, err := db.Prepare("UPDATE users SET `wins` = ?, `losses` = ?, `win_loss_ratio` = ? WHERE (`user_id`)")
+func UpdateTable(db *sql.DB, wins int, loss int, ratio float64, userID int64) {
+	update, err := db.Prepare("UPDATE users SET wins=?,losses=?,win_loss_ratio=? where user_id=?;")
 	if err != nil {
 		log.Print(err)
 	}
+
 	_, err = update.Exec(wins, loss, ratio, userID)
 	if err != nil {
 		log.Println(err)

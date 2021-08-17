@@ -2,8 +2,7 @@ package language
 
 import (
 	"encoding/json"
-	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api"
-	"log"
+	"fmt"
 	"os"
 )
 
@@ -57,14 +56,7 @@ func GenerateLanguage() {
 	UserLang = Lang
 }
 
-func TakeLanguage(userID int64, bot *tgbotapi.BotAPI) {
-	msgLanguage := tgbotapi.NewMessage(userID, LangText(UserLang.Language, "select_language"))
-	msgLanguage.ReplyMarkup = tgbotapi.NewInlineKeyboardMarkup(
-		tgbotapi.NewInlineKeyboardRow(
-			tgbotapi.NewInlineKeyboardButtonData(LangText(UserLang.Language, "russian"), "ru"),
-			tgbotapi.NewInlineKeyboardButtonData(LangText(UserLang.Language, "english"), "en")))
-	_, err := bot.Send(msgLanguage)
-	if err != nil {
-		log.Println(err)
-	}
+func FormatText(lang, key string, values ...interface{}) string {
+	formatText := LangText(lang, key)
+	return fmt.Sprintf(formatText, values...)
 }

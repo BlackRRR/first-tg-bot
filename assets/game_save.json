@@ -1,570 +1,1344 @@
 {
-  "1Urweb5vGQWsYfBp": {
+  "05sOzjQNyAPhZY75": {
     "Key": "",
     "PlayingField": [
       [
         "0",
-        "0",
-        "0",
-        "0",
-        "0"
+        "2",
+        "bomb",
+        "3",
+        "1"
       ],
       [
         "0",
-        "0",
-        "0",
-        "0",
-        "0"
+        "2",
+        "bomb",
+        "bomb",
+        "1"
       ],
       [
         "1",
         "2",
-        "2",
+        "3",
         "2",
         "1"
       ],
       [
+        "1",
         "bomb",
-        "3",
-        "bomb",
-        "bomb",
-        "2"
+        "2",
+        "1",
+        "0"
       ],
       [
         "1",
-        "3",
+        "2",
         "bomb",
-        "bomb",
-        "2"
+        "1",
+        "0"
       ]
     ],
     "OpenedButtonsField": [
       [
-        true,
-        true,
-        true,
-        true,
-        true
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
       ],
       [
-        true,
-        true,
-        true,
-        true,
-        true
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
       ],
       [
-        true,
-        true,
-        true,
-        true,
-        true
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
       ],
       [
-        false,
-        false,
-        false,
-        false,
-        false
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
       ],
       [
-        false,
-        false,
-        false,
-        false,
-        false
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
       ]
     ],
-    "MessageID": 0,
+    "MessageID": 2647,
     "Size": 5,
-    "BombCounter": 5
+    "BombCounter": 5,
+    "Flag": "true",
+    "FlagCounter": 0
   },
-  "9Y3QLGQUBTcwNknE": {
+  "2GJ6HKFglWDu8TON": {
     "Key": "",
     "PlayingField": [
       [
+        "0",
         "1",
+        "bomb",
+        "2",
+        "bomb"
+      ],
+      [
+        "1",
+        "2",
+        "1",
+        "3",
+        "2"
+      ],
+      [
+        "bomb",
         "1",
         "0",
         "1",
         "bomb"
       ],
       [
-        "bomb",
+        "1",
         "1",
         "0",
         "1",
         "1"
       ],
       [
-        "3",
-        "3",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 2993,
+    "Size": 5,
+    "BombCounter": 4,
+    "Flag": "",
+    "FlagCounter": 0
+  },
+  "3GhssAb00Ec1L5Cs": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "1",
+        "1",
         "1",
         "0",
         "0"
       ],
       [
-        "bomb",
+        "1",
         "bomb",
         "1",
+        "0",
+        "0"
+      ],
+      [
+        "2",
+        "2",
+        "2",
         "1",
         "1"
       ],
       [
+        "3",
+        "bomb",
         "2",
-        "2",
-        "1",
         "1",
         "bomb"
+      ],
+      [
+        "bomb",
+        "bomb",
+        "2",
+        "1",
+        "1"
       ]
     ],
     "OpenedButtonsField": [
       [
-        false,
-        true,
-        true,
-        true,
-        false
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
       ],
       [
-        false,
-        true,
-        true,
-        true,
-        true
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
       ],
       [
-        false,
-        true,
-        true,
-        true,
-        true
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
       ],
       [
-        false,
-        false,
-        true,
-        true,
-        true
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
       ],
       [
-        false,
-        false,
-        false,
-        false,
-        false
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
       ]
     ],
-    "MessageID": 0,
+    "MessageID": 2621,
     "Size": 5,
-    "BombCounter": 5
+    "BombCounter": 5,
+    "Flag": "",
+    "FlagCounter": 0
   },
-  "CR0q2IMESAIUEbPc": {
+  "3OzBd5a9u7FJnf1J": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "2",
+        "bomb",
+        "2",
+        "0",
+        "0"
+      ],
+      [
+        "2",
+        "bomb",
+        "3",
+        "1",
+        "0"
+      ],
+      [
+        "1",
+        "2",
+        "bomb",
+        "2",
+        "1"
+      ],
+      [
+        "0",
+        "1",
+        "2",
+        "bomb",
+        "1"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "1",
+        "1"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "true",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "true",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 2849,
+    "Size": 5,
+    "BombCounter": 4,
+    "Flag": "",
+    "FlagCounter": 0
+  },
+  "3Xkpz1Cf7zXt5bhP": {
     "Key": "",
     "PlayingField": [
       [
         "0",
         "0",
-        "0",
-        "1",
-        "bomb",
-        "1",
-        "0"
-      ],
-      [
-        "0",
-        "0",
-        "0",
-        "1",
-        "1",
-        "1",
-        "0"
-      ],
-      [
-        "0",
-        "0",
-        "0",
-        "0",
-        "0",
-        "0",
-        "0"
-      ],
-      [
-        "0",
-        "0",
-        "1",
-        "1",
-        "1",
-        "0",
-        "0"
-      ],
-      [
-        "0",
         "1",
         "3",
-        "bomb",
-        "3",
+        "bomb"
+      ],
+      [
+        "1",
         "2",
-        "2"
+        "3",
+        "bomb",
+        "bomb"
       ],
       [
-        "0",
-        "1",
+        "2",
         "bomb",
         "bomb",
+        "5",
+        "4"
+      ],
+      [
+        "bomb",
+        "5",
         "4",
         "bomb",
         "bomb"
       ],
       [
-        "0",
-        "1",
-        "2",
-        "2",
-        "3",
         "bomb",
-        "bomb"
+        "bomb",
+        "2",
+        "2",
+        "2"
       ]
     ],
     "OpenedButtonsField": [
       [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
       ],
       [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
+        "false",
+        "false",
+        "true",
+        "false",
+        "false"
       ],
       [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
       ],
       [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
       ],
       [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
-      ],
-      [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
-      ],
-      [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
       ]
     ],
-    "MessageID": 1727,
+    "MessageID": 0,
+    "Size": 5,
+    "BombCounter": 10,
+    "Flag": "",
+    "FlagCounter": 0
+  },
+  "4QhVnPCLvorlOg5g": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      [
+        "bomb",
+        "1",
+        "1",
+        "bomb",
+        "1"
+      ],
+      [
+        "1",
+        "1",
+        "2",
+        "2",
+        "2"
+      ],
+      [
+        "0",
+        "1",
+        "2",
+        "bomb",
+        "1"
+      ],
+      [
+        "0",
+        "1",
+        "bomb",
+        "2",
+        "1"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 2760,
+    "Size": 5,
+    "BombCounter": 4,
+    "Flag": "",
+    "FlagCounter": 0
+  },
+  "4qK95jEZIM8Pqvul": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "1",
+        "1",
+        "0",
+        "1",
+        "1"
+      ],
+      [
+        "bomb",
+        "2",
+        "0",
+        "1",
+        "bomb"
+      ],
+      [
+        "bomb",
+        "2",
+        "0",
+        "2",
+        "2"
+      ],
+      [
+        "1",
+        "2",
+        "1",
+        "2",
+        "bomb"
+      ],
+      [
+        "0",
+        "1",
+        "bomb",
+        "2",
+        "1"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "true",
+        "true",
+        "true",
+        "false"
+      ],
+      [
+        "false",
+        "true",
+        "true",
+        "true",
+        "false"
+      ],
+      [
+        "false",
+        "true",
+        "true",
+        "true",
+        "false"
+      ],
+      [
+        "false",
+        "true",
+        "true",
+        "true",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 0,
+    "Size": 5,
+    "BombCounter": 5,
+    "Flag": "",
+    "FlagCounter": 0
+  },
+  "57GysdqatDEz5HUU": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "1",
+        "1"
+      ],
+      [
+        "1",
+        "1",
+        "2",
+        "1",
+        "2",
+        "bomb"
+      ],
+      [
+        "2",
+        "bomb",
+        "4",
+        "bomb",
+        "3",
+        "2"
+      ],
+      [
+        "2",
+        "bomb",
+        "bomb",
+        "3",
+        "bomb",
+        "1"
+      ],
+      [
+        "1",
+        "2",
+        "2",
+        "2",
+        "1",
+        "1"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "true",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 2748,
+    "Size": 6,
+    "BombCounter": 6,
+    "Flag": "",
+    "FlagCounter": 0
+  },
+  "57nL4mzcABBI9NRR": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "0",
+        "0",
+        "0",
+        "1",
+        "bomb",
+        "bomb",
+        "1"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "1",
+        "2",
+        "2",
+        "1"
+      ],
+      [
+        "1",
+        "1",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "2",
+        "bomb",
+        "2",
+        "1",
+        "1",
+        "1",
+        "0"
+      ],
+      [
+        "3",
+        "bomb",
+        "3",
+        "2",
+        "bomb",
+        "2",
+        "1"
+      ],
+      [
+        "bomb",
+        "3",
+        "bomb",
+        "3",
+        "2",
+        "3",
+        "bomb"
+      ],
+      [
+        "1",
+        "2",
+        "1",
+        "2",
+        "bomb",
+        "2",
+        "1"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "true",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 2829,
     "Size": 7,
-    "BombCounter": 8
+    "BombCounter": 9,
+    "Flag": "",
+    "FlagCounter": 0
   },
-  "POeRwmpV2OpUblsR": {
+  "6KNks2SxuJuf4D89": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "1",
+        "1",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "2",
+        "bomb",
+        "2",
+        "2",
+        "2"
+      ],
+      [
+        "bomb",
+        "2",
+        "3",
+        "bomb",
+        "bomb"
+      ],
+      [
+        "3",
+        "3",
+        "3",
+        "bomb",
+        "3"
+      ],
+      [
+        "bomb",
+        "bomb",
+        "2",
+        "1",
+        "1"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "true",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 3019,
+    "Size": 5,
+    "BombCounter": 7,
+    "Flag": "true",
+    "FlagCounter": 20
+  },
+  "6RxY8zv5U9oRvL47": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "0",
+        "2",
+        "bomb",
+        "2",
+        "0"
+      ],
+      [
+        "0",
+        "2",
+        "bomb",
+        "3",
+        "1"
+      ],
+      [
+        "0",
+        "1",
+        "2",
+        "3",
+        "bomb"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "bomb",
+        "2"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "1",
+        "1"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "true",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 2811,
+    "Size": 5,
+    "BombCounter": 4,
+    "Flag": "",
+    "FlagCounter": 0
+  },
+  "6q8sgstk85UcAQYF": {
     "Key": "",
     "PlayingField": [
       [
         "bomb",
-        "1",
-        "0",
-        "0",
-        "0"
-      ],
-      [
-        "1",
-        "1",
-        "0",
-        "0",
-        "0"
-      ],
-      [
-        "0",
-        "0",
+        "2",
         "0",
         "1",
         "1"
       ],
       [
+        "bomb",
+        "2",
+        "0",
+        "2",
+        "bomb"
+      ],
+      [
+        "1",
+        "1",
+        "0",
+        "3",
+        "bomb"
+      ],
+      [
+        "1",
+        "1",
+        "0",
+        "3",
+        "bomb"
+      ],
+      [
+        "bomb",
+        "1",
+        "0",
+        "2",
+        "bomb"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "true",
+        "true",
+        "true",
+        "false"
+      ],
+      [
+        "false",
+        "true",
+        "true",
+        "true",
+        "false"
+      ],
+      [
+        "false",
+        "true",
+        "true",
+        "true",
+        "false"
+      ],
+      [
+        "false",
+        "true",
+        "true",
+        "true",
+        "false"
+      ],
+      [
+        "false",
+        "true",
+        "true",
+        "true",
+        "false"
+      ]
+    ],
+    "MessageID": 0,
+    "Size": 5,
+    "BombCounter": 7,
+    "Flag": "",
+    "FlagCounter": 0
+  },
+  "71wF8tjUjv6h8Eem": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "0",
+        "1",
+        "bomb",
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "1",
+        "1",
+        "0"
+      ],
+      [
+        "2",
+        "2",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "bomb",
+        "bomb",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "bomb",
+        "3",
+        "1",
+        "0",
+        "0"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 2745,
+    "Size": 5,
+    "BombCounter": 4,
+    "Flag": "",
+    "FlagCounter": 0
+  },
+  "7RMZ9WHVTKDWX0NZ": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "bomb",
+        "2",
+        "2",
+        "2",
+        "2",
         "1",
         "2",
+        "1"
+      ],
+      [
+        "2",
         "3",
+        "bomb",
+        "bomb",
+        "4",
+        "bomb",
         "3",
         "bomb"
       ],
       [
         "1",
         "bomb",
+        "5",
         "bomb",
+        "5",
         "bomb",
+        "3",
+        "1"
+      ],
+      [
+        "1",
+        "1",
+        "3",
+        "bomb",
+        "3",
+        "1",
+        "2",
+        "1"
+      ],
+      [
+        "1",
+        "1",
+        "2",
+        "1",
+        "1",
+        "0",
+        "1",
+        "bomb"
+      ],
+      [
+        "2",
+        "bomb",
+        "4",
+        "3",
+        "2",
+        "1",
+        "2",
         "2"
+      ],
+      [
+        "3",
+        "bomb",
+        "bomb",
+        "bomb",
+        "bomb",
+        "2",
+        "3",
+        "bomb"
+      ],
+      [
+        "bomb",
+        "3",
+        "4",
+        "bomb",
+        "3",
+        "2",
+        "bomb",
+        "bomb"
       ]
     ],
     "OpenedButtonsField": [
       [
-        false,
-        true,
-        true,
-        true,
-        true
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
       ],
       [
-        true,
-        true,
-        true,
-        true,
-        true
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
       ],
       [
-        true,
-        true,
-        true,
-        true,
-        true
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
       ],
       [
-        true,
-        true,
-        true,
-        true,
-        false
+        "false",
+        "false",
+        "false",
+        "flag",
+        "flag",
+        "false",
+        "false",
+        "false"
       ],
       [
-        false,
-        false,
-        false,
-        false,
-        false
+        "false",
+        "false",
+        "flag",
+        "flag",
+        "flag",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "flag",
+        "flag",
+        "flag",
+        "true",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "flag",
+        "flag",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "flag",
+        "flag",
+        "flag",
+        "false",
+        "false",
+        "false"
       ]
     ],
-    "MessageID": 0,
-    "Size": 5,
-    "BombCounter": 5
-  },
-  "RfU85y4e9B97CrNs": {
-    "Key": "",
-    "PlayingField": [
-      [
-        "bomb",
-        "2",
-        "0",
-        "1",
-        "1",
-        "1",
-        "0",
-        "0"
-      ],
-      [
-        "bomb",
-        "2",
-        "1",
-        "3",
-        "bomb",
-        "2",
-        "0",
-        "0"
-      ],
-      [
-        "3",
-        "4",
-        "3",
-        "bomb",
-        "bomb",
-        "2",
-        "0",
-        "0"
-      ],
-      [
-        "bomb",
-        "bomb",
-        "bomb",
-        "3",
-        "2",
-        "1",
-        "0",
-        "0"
-      ],
-      [
-        "2",
-        "4",
-        "4",
-        "3",
-        "1",
-        "1",
-        "1",
-        "1"
-      ],
-      [
-        "0",
-        "1",
-        "bomb",
-        "bomb",
-        "1",
-        "1",
-        "bomb",
-        "1"
-      ],
-      [
-        "1",
-        "2",
-        "3",
-        "2",
-        "1",
-        "1",
-        "1",
-        "1"
-      ],
-      [
-        "1",
-        "bomb",
-        "1",
-        "0",
-        "0",
-        "0",
-        "0",
-        "0"
-      ]
-    ],
-    "OpenedButtonsField": [
-      [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
-      ],
-      [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
-      ],
-      [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
-      ],
-      [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
-      ],
-      [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
-      ],
-      [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
-      ],
-      [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
-      ],
-      [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
-      ]
-    ],
-    "MessageID": 1728,
+    "MessageID": 3033,
     "Size": 8,
-    "BombCounter": 12
+    "BombCounter": 20,
+    "Flag": "true",
+    "FlagCounter": 7
   },
-  "SVD2oJ4UMMirn4Fs": {
+  "9ORjmLe50sIEurG9": {
     "Key": "",
     "PlayingField": [
       [
-        "0",
+        "2",
+        "bomb",
         "1",
+        "0",
+        "0"
+      ],
+      [
         "bomb",
         "2",
-        "bomb"
-      ],
-      [
-        "0",
         "1",
         "1",
-        "3",
-        "2"
+        "1"
       ],
       [
-        "0",
-        "0",
+        "1",
+        "1",
         "0",
         "1",
         "bomb"
@@ -586,70 +1360,606 @@
     ],
     "OpenedButtonsField": [
       [
-        true,
-        true,
-        false,
-        false,
-        false
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
       ],
       [
-        true,
-        true,
-        true,
-        true,
-        false
+        "false",
+        "true",
+        "true",
+        "true",
+        "false"
       ],
       [
-        true,
-        true,
-        true,
-        true,
-        false
+        "true",
+        "true",
+        "true",
+        "true",
+        "false"
       ],
       [
-        true,
-        true,
-        true,
-        true,
-        false
+        "true",
+        "true",
+        "true",
+        "true",
+        "false"
       ],
       [
-        true,
-        true,
-        false,
-        false,
-        false
+        "true",
+        "true",
+        "false",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 2590,
+    "Size": 5,
+    "BombCounter": 5,
+    "Flag": "",
+    "FlagCounter": 0
+  },
+  "9QiruKcUxUs07toZ": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "1",
+        "bomb",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "2",
+        "2",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "bomb",
+        "1",
+        "0",
+        "1",
+        "1"
+      ],
+      [
+        "1",
+        "1",
+        "0",
+        "2",
+        "bomb"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "2",
+        "bomb"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 3085,
+    "Size": 5,
+    "BombCounter": 4,
+    "Flag": "",
+    "FlagCounter": 15
+  },
+  "9kZ2wA5fFt5J0Yds": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "2",
+        "bomb",
+        "bomb",
+        "1",
+        "0"
+      ],
+      [
+        "bomb",
+        "3",
+        "2",
+        "1",
+        "0"
+      ],
+      [
+        "2",
+        "2",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "bomb",
+        "2",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "bomb",
+        "2",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "false",
+        "true",
+        "true"
+      ],
+      [
+        "false",
+        "true",
+        "true",
+        "true",
+        "true"
+      ],
+      [
+        "flag",
+        "true",
+        "true",
+        "true",
+        "true"
+      ],
+      [
+        "false",
+        "true",
+        "true",
+        "true",
+        "true"
+      ],
+      [
+        "false",
+        "true",
+        "true",
+        "true",
+        "true"
       ]
     ],
     "MessageID": 0,
     "Size": 5,
-    "BombCounter": 5
+    "BombCounter": 5,
+    "Flag": "false",
+    "FlagCounter": 0
   },
-  "Ujx7DTqDrjP9GY4i": {
+  "B7ojEdvqBZSmVbIK": {
     "Key": "",
     "PlayingField": [
       [
+        "1",
+        "2",
+        "2",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "bomb",
         "bomb",
         "1",
         "0",
-        "0",
         "0"
       ],
       [
         "1",
+        "2",
+        "2",
         "1",
-        "0",
-        "0",
-        "0"
+        "1",
+        "1"
       ],
       [
+        "1",
+        "2",
+        "1",
+        "2",
+        "3",
+        "bomb"
+      ],
+      [
+        "bomb",
+        "3",
+        "bomb",
+        "2",
+        "bomb",
+        "bomb"
+      ],
+      [
+        "bomb",
+        "3",
+        "1",
+        "2",
+        "3",
+        "bomb"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "true",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 3104,
+    "Size": 6,
+    "BombCounter": 9,
+    "Flag": "false",
+    "FlagCounter": 12
+  },
+  "CVSRQlWzd0xJrg7x": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "2",
+        "bomb"
+      ],
+      [
+        "1",
+        "1",
+        "1",
+        "1",
+        "3",
+        "bomb"
+      ],
+      [
+        "bomb",
+        "1",
+        "1",
+        "bomb",
+        "3",
+        "2"
+      ],
+      [
+        "1",
+        "1",
+        "1",
+        "1",
+        "3",
+        "bomb"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "2",
+        "bomb"
+      ],
+      [
+        "0",
         "0",
         "0",
         "0",
         "1",
         "1"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
       ],
       [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "true",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 0,
+    "Size": 6,
+    "BombCounter": 6,
+    "Flag": "false",
+    "FlagCounter": 0
+  },
+  "D0XC34qjoaIRogWA": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "0",
+        "0",
+        "0",
+        "2",
+        "bomb"
+      ],
+      [
+        "1",
+        "1",
+        "0",
+        "3",
+        "bomb"
+      ],
+      [
+        "bomb",
+        "1",
+        "0",
+        "2",
+        "bomb"
+      ],
+      [
+        "1",
+        "1",
+        "0",
+        "2",
+        "2"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "1",
+        "bomb"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 0,
+    "Size": 5,
+    "BombCounter": 5,
+    "Flag": "",
+    "FlagCounter": 0
+  },
+  "EIowpXOyqVMQIV7M": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "bomb",
+        "2",
+        "1",
+        "1",
+        "0"
+      ],
+      [
+        "1",
+        "2",
+        "bomb",
+        "2",
+        "1"
+      ],
+      [
+        "0",
+        "1",
+        "2",
+        "bomb",
+        "1"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "2",
+        "2"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "1",
+        "bomb"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "true",
+        "true",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "true",
+        "true",
+        "true",
+        "false",
+        "false"
+      ],
+      [
+        "true",
+        "true",
+        "true",
+        "true",
+        "false"
+      ],
+      [
+        "true",
+        "true",
+        "true",
+        "true",
+        "false"
+      ]
+    ],
+    "MessageID": 0,
+    "Size": 5,
+    "BombCounter": 4,
+    "Flag": "false",
+    "FlagCounter": 0
+  },
+  "FJQI4gqEFs8y7vHr": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "bomb",
+        "3",
+        "1",
+        "0",
+        "1",
+        "bomb",
+        "2"
+      ],
+      [
+        "bomb",
+        "bomb",
         "1",
         "1",
         "2",
@@ -657,55 +1967,123 @@
         "bomb"
       ],
       [
+        "2",
+        "3",
+        "2",
+        "2",
+        "bomb",
+        "2",
+        "1"
+      ],
+      [
+        "0",
         "1",
         "bomb",
         "2",
-        "bomb",
+        "1",
+        "2",
+        "1"
+      ],
+      [
+        "0",
+        "1",
+        "2",
+        "2",
+        "1",
+        "1",
         "bomb"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "bomb",
+        "1",
+        "1",
+        "1"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "1",
+        "1",
+        "0",
+        "0"
       ]
     ],
     "OpenedButtonsField": [
       [
-        false,
-        true,
-        true,
-        true,
-        true
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
       ],
       [
-        true,
-        true,
-        true,
-        true,
-        true
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
       ],
       [
-        true,
-        true,
-        true,
-        true,
-        true
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
       ],
       [
-        true,
-        true,
-        true,
-        true,
-        false
+        "false",
+        "false",
+        "false",
+        "false",
+        "true",
+        "false",
+        "false"
       ],
       [
-        false,
-        false,
-        false,
-        false,
-        false
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
       ]
     ],
     "MessageID": 0,
-    "Size": 5,
-    "BombCounter": 5
+    "Size": 7,
+    "BombCounter": 9,
+    "Flag": "",
+    "FlagCounter": 0
   },
-  "VEpDGT3hou4gzDXF": {
+  "HIysmz46pQKbyC9k": {
     "Key": "",
     "PlayingField": [
       [
@@ -713,24 +2091,358 @@
         "1",
         "bomb",
         "2",
+        "1",
+        "1"
+      ],
+      [
+        "0",
+        "1",
+        "1",
+        "3",
         "bomb",
+        "2"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "3",
+        "bomb",
+        "2"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "bomb",
+        "2",
+        "1"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "1",
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "true",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 0,
+    "Size": 6,
+    "BombCounter": 4,
+    "Flag": "false",
+    "FlagCounter": 0
+  },
+  "HiLiIyFJy3ZScGyN": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "1",
+        "bomb",
+        "bomb",
+        "bomb",
+        "1"
+      ],
+      [
+        "2",
+        "3",
+        "3",
+        "2",
+        "1"
+      ],
+      [
+        "bomb",
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "1",
         "1",
         "1",
         "1"
       ],
       [
+        "0",
+        "0",
+        "1",
+        "bomb",
+        "1"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "true",
+        "true",
+        "true",
+        "true"
+      ],
+      [
+        "false",
+        "true",
+        "true",
+        "true",
+        "true"
+      ],
+      [
+        "true",
+        "true",
+        "true",
+        "true",
+        "true"
+      ],
+      [
+        "true",
+        "true",
+        "true",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 2641,
+    "Size": 5,
+    "BombCounter": 5,
+    "Flag": "true",
+    "FlagCounter": 0
+  },
+  "I6xwJbAnDPUwKkDI": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "2",
+        "bomb",
+        "2",
+        "0",
+        "0"
+      ],
+      [
+        "2",
+        "bomb",
+        "2",
+        "0",
+        "0"
+      ],
+      [
         "1",
         "2",
         "2",
+        "1",
+        "0"
+      ],
+      [
+        "1",
+        "2",
+        "bomb",
+        "1",
+        "0"
+      ],
+      [
+        "bomb",
         "2",
         "1",
         "1",
+        "0"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "true",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "flag",
+        "flag",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 2867,
+    "Size": 5,
+    "BombCounter": 4,
+    "Flag": "true",
+    "FlagCounter": 0
+  },
+  "Ifii3yeW8JgFOOV5": {
+    "Key": "",
+    "PlayingField": [
+      [
         "1",
+        "1",
+        "1",
+        "bomb",
+        "2"
+      ],
+      [
+        "bomb",
+        "1",
+        "1",
+        "2",
         "bomb"
       ],
       [
         "1",
+        "1",
+        "0",
+        "1",
+        "1"
+      ],
+      [
+        "1",
+        "1",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "1",
         "bomb",
+        "1",
+        "0",
+        "0"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "true",
+        "true",
+        "true",
+        "false"
+      ],
+      [
+        "false",
+        "true",
+        "true",
+        "true",
+        "true"
+      ],
+      [
+        "false",
+        "true",
+        "true",
+        "true",
+        "true"
+      ],
+      [
+        "false",
+        "false",
+        "true",
+        "true",
+        "true"
+      ]
+    ],
+    "MessageID": 2871,
+    "Size": 5,
+    "BombCounter": 4,
+    "Flag": "false",
+    "FlagCounter": 0
+  },
+  "IrKG3AnGUBNwb14N": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "0",
+        "0",
         "1",
         "1",
         "1",
@@ -740,142 +2452,1644 @@
       ],
       [
         "1",
-        "1",
         "2",
         "2",
         "bomb",
         "1",
         "1",
+        "bomb",
         "bomb"
       ],
       [
-        "0",
-        "0",
+        "bomb",
+        "4",
+        "bomb",
         "2",
+        "1",
+        "1",
+        "2",
+        "2"
+      ],
+      [
+        "bomb",
         "bomb",
         "3",
+        "2",
         "1",
-        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "2",
+        "2",
+        "2",
+        "bomb",
+        "2",
+        "2",
+        "2",
         "1"
       ],
       [
         "0",
-        "0",
-        "2",
-        "bomb",
-        "4",
-        "2",
         "1",
-        "0"
-      ],
-      [
-        "0",
-        "0",
         "2",
-        "4",
-        "bomb",
-        "bomb",
-        "1",
-        "0"
-      ],
-      [
-        "0",
-        "0",
-        "1",
-        "bomb",
-        "bomb",
+        "2",
         "3",
+        "bomb",
+        "bomb",
+        "3"
+      ],
+      [
         "1",
-        "0"
+        "2",
+        "bomb",
+        "1",
+        "2",
+        "bomb",
+        "bomb",
+        "bomb"
+      ],
+      [
+        "1",
+        "bomb",
+        "2",
+        "1",
+        "1",
+        "2",
+        "3",
+        "2"
       ]
     ],
     "OpenedButtonsField": [
       [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
       ],
       [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
       ],
       [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
       ],
       [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
       ],
       [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
       ],
       [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
       ],
       [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
       ],
       [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
       ]
     ],
-    "MessageID": 1726,
+    "MessageID": 3010,
     "Size": 8,
-    "BombCounter": 12
+    "BombCounter": 15,
+    "Flag": "",
+    "FlagCounter": 0
   },
-  "ZBfs7twKgtoo04wv": {
+  "JUb6XfYOluJS17LV": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "0",
+        "0",
+        "1",
+        "bomb",
+        "1"
+      ],
+      [
+        "1",
+        "1",
+        "2",
+        "1",
+        "1"
+      ],
+      [
+        "2",
+        "bomb",
+        "2",
+        "1",
+        "0"
+      ],
+      [
+        "bomb",
+        "3",
+        "bomb",
+        "1",
+        "0"
+      ],
+      [
+        "1",
+        "2",
+        "1",
+        "1",
+        "0"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "true",
+        "true",
+        "true",
+        "flag",
+        "false"
+      ],
+      [
+        "true",
+        "true",
+        "true",
+        "flag",
+        "false"
+      ],
+      [
+        "false",
+        "flag",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 0,
+    "Size": 5,
+    "BombCounter": 4,
+    "Flag": "true",
+    "FlagCounter": 0
+  },
+  "Ku0r6hhjizskWkgZ": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "1",
+        "2",
+        "1",
+        "1",
+        "0"
+      ],
+      [
+        "bomb",
+        "2",
+        "bomb",
+        "1",
+        "0"
+      ],
+      [
+        "2",
+        "3",
+        "2",
+        "1",
+        "0"
+      ],
+      [
+        "1",
+        "bomb",
+        "2",
+        "1",
+        "0"
+      ],
+      [
+        "1",
+        "2",
+        "bomb",
+        "1",
+        "0"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 2803,
+    "Size": 5,
+    "BombCounter": 4,
+    "Flag": "",
+    "FlagCounter": 0
+  },
+  "LP3qSu7jvAGsgXJi": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "bomb",
+        "3",
+        "bomb",
+        "1",
+        "0"
+      ],
+      [
+        "2",
+        "bomb",
+        "2",
+        "1",
+        "0"
+      ],
+      [
+        "1",
+        "1",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "1",
+        "1"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "bomb",
+        "1"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "true",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "flag",
+        "flag",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "flag",
+        "flag",
+        "false"
+      ]
+    ],
+    "MessageID": 3087,
+    "Size": 5,
+    "BombCounter": 4,
+    "Flag": "true",
+    "FlagCounter": 11
+  },
+  "LRD0kZr28LBGzf6q": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "bomb",
+        "2",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "2",
+        "bomb",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "3",
+        "3",
+        "2",
+        "0",
+        "0"
+      ],
+      [
+        "bomb",
+        "bomb",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "2",
+        "2",
+        "1",
+        "0",
+        "0"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "flag",
+        "flag",
+        "flag",
+        "flag",
+        "false"
+      ],
+      [
+        "flag",
+        "flag",
+        "true",
+        "false",
+        "false"
+      ],
+      [
+        "flag",
+        "flag",
+        "true",
+        "false",
+        "false"
+      ],
+      [
+        "flag",
+        "true",
+        "flag",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 3089,
+    "Size": 5,
+    "BombCounter": 4,
+    "Flag": "true",
+    "FlagCounter": 5
+  },
+  "M4AKi5H2WueOqBpf": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "0",
+        "0",
+        "0",
+        "1",
+        "2",
+        "2",
+        "1"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "2",
+        "bomb",
+        "bomb",
+        "1"
+      ],
+      [
+        "0",
+        "1",
+        "1",
+        "3",
+        "bomb",
+        "4",
+        "2"
+      ],
+      [
+        "0",
+        "1",
+        "bomb",
+        "2",
+        "3",
+        "bomb",
+        "2"
+      ],
+      [
+        "0",
+        "1",
+        "2",
+        "2",
+        "3",
+        "bomb",
+        "2"
+      ],
+      [
+        "1",
+        "2",
+        "3",
+        "bomb",
+        "2",
+        "1",
+        "1"
+      ],
+      [
+        "1",
+        "bomb",
+        "bomb",
+        "2",
+        "1",
+        "0",
+        "0"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "flag",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "true",
+        "false",
+        "flag",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 3009,
+    "Size": 7,
+    "BombCounter": 9,
+    "Flag": "false",
+    "FlagCounter": 0
+  },
+  "Muz4R9AWQL6oOEkw": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "0",
+        "1",
+        "bomb",
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "2",
+        "2",
+        "1"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "bomb",
+        "2"
+      ],
+      [
+        "1",
+        "1",
+        "2",
+        "2",
+        "bomb"
+      ],
+      [
+        "1",
+        "bomb",
+        "1",
+        "1",
+        "1"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "true",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "true",
+        "flag",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "flag",
+        "flag",
+        "flag"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 2912,
+    "Size": 5,
+    "BombCounter": 4,
+    "Flag": "false",
+    "FlagCounter": 0
+  },
+  "N9lShQ0RWdlWGvBN": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "0",
+        "0",
+        "1",
+        "bomb",
+        "bomb",
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "2",
+        "2",
+        "2",
+        "1"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1",
+        "bomb"
+      ],
+      [
+        "1",
+        "1",
+        "0",
+        "1",
+        "1",
+        "2",
+        "1"
+      ],
+      [
+        "bomb",
+        "2",
+        "1",
+        "2",
+        "bomb",
+        "2",
+        "1"
+      ],
+      [
+        "1",
+        "2",
+        "bomb",
+        "3",
+        "4",
+        "bomb",
+        "2"
+      ],
+      [
+        "0",
+        "1",
+        "2",
+        "bomb",
+        "3",
+        "bomb",
+        "2"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 2756,
+    "Size": 7,
+    "BombCounter": 9,
+    "Flag": "",
+    "FlagCounter": 0
+  },
+  "OwNcVEmPbUnmVqzO": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "1",
+        "2",
+        "2",
+        "1",
+        "1",
+        "2",
+        "bomb"
+      ],
+      [
+        "1",
+        "bomb",
+        "bomb",
+        "1",
+        "1",
+        "bomb",
+        "2"
+      ],
+      [
+        "1",
+        "2",
+        "2",
+        "1",
+        "1",
+        "2",
+        "2"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "2",
+        "bomb"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "2",
+        "bomb"
+      ],
+      [
+        "2",
+        "2",
+        "1",
+        "0",
+        "0",
+        "1",
+        "1"
+      ],
+      [
+        "bomb",
+        "bomb",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 0,
+    "Size": 7,
+    "BombCounter": 8,
+    "Flag": "",
+    "FlagCounter": 0
+  },
+  "PE68andrhwL6SOgo": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "1",
+        "1",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "bomb",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "2",
+        "2",
+        "2",
+        "0",
+        "0"
+      ],
+      [
+        "2",
+        "bomb",
+        "2",
+        "1",
+        "1"
+      ],
+      [
+        "bomb",
+        "2",
+        "2",
+        "bomb",
+        "1"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "true",
+        "true",
+        "true"
+      ],
+      [
+        "false",
+        "false",
+        "true",
+        "true",
+        "true"
+      ],
+      [
+        "false",
+        "false",
+        "true",
+        "true",
+        "true"
+      ],
+      [
+        "false",
+        "false",
+        "true",
+        "true",
+        "true"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 2921,
+    "Size": 5,
+    "BombCounter": 4,
+    "Flag": "false",
+    "FlagCounter": 0
+  },
+  "Q3srbpVUyJr8MNGO": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "bomb",
+        "1",
+        "0",
+        "1",
+        "1"
+      ],
+      [
+        "2",
+        "2",
+        "0",
+        "1",
+        "bomb"
+      ],
+      [
+        "bomb",
+        "1",
+        "1",
+        "2",
+        "2"
+      ],
+      [
+        "2",
+        "2",
+        "2",
+        "bomb",
+        "1"
+      ],
+      [
+        "1",
+        "bomb",
+        "2",
+        "1",
+        "1"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "true",
+        "true",
+        "true",
+        "false"
+      ],
+      [
+        "false",
+        "true",
+        "true",
+        "true",
+        "false"
+      ],
+      [
+        "false",
+        "true",
+        "true",
+        "true",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "flag",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 0,
+    "Size": 5,
+    "BombCounter": 5,
+    "Flag": "false",
+    "FlagCounter": 0
+  },
+  "SfJzQUeBxZbcnIf9": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "bomb",
+        "bomb",
+        "1",
+        "1",
+        "1"
+      ],
+      [
+        "3",
+        "3",
+        "2",
+        "1",
+        "bomb"
+      ],
+      [
+        "1",
+        "bomb",
+        "1",
+        "2",
+        "2"
+      ],
+      [
+        "1",
+        "1",
+        "2",
+        "3",
+        "bomb"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "bomb",
+        "bomb"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "true",
+        "true",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "true",
+        "true",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "true",
+        "true",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 0,
+    "Size": 5,
+    "BombCounter": 7,
+    "Flag": "false",
+    "FlagCounter": 0
+  },
+  "TJEADIFwc1TdOd2w": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "1",
+        "bomb",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "2",
+        "2",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "bomb",
+        "3",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "bomb",
+        "bomb",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "2",
+        "2",
+        "1",
+        "0",
+        "0"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 2746,
+    "Size": 5,
+    "BombCounter": 4,
+    "Flag": "",
+    "FlagCounter": 0
+  },
+  "Vlxf8te0AuljC2Ss": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "0",
+        "0",
+        "1",
+        "bomb",
+        "2"
+      ],
+      [
+        "1",
+        "1",
+        "1",
+        "3",
+        "bomb"
+      ],
+      [
+        "bomb",
+        "1",
+        "0",
+        "3",
+        "bomb"
+      ],
+      [
+        "1",
+        "1",
+        "0",
+        "2",
+        "bomb"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "1",
+        "1"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 0,
+    "Size": 5,
+    "BombCounter": 5,
+    "Flag": "false",
+    "FlagCounter": 0
+  },
+  "WxKByPOATFd8kJwz": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "1",
+        "2",
+        "bomb",
+        "1",
+        "0"
+      ],
+      [
+        "1",
+        "bomb",
+        "2",
+        "1",
+        "0"
+      ],
+      [
+        "1",
+        "1",
+        "2",
+        "1",
+        "1"
+      ],
+      [
+        "0",
+        "1",
+        "2",
+        "bomb",
+        "1"
+      ],
+      [
+        "0",
+        "1",
+        "bomb",
+        "2",
+        "1"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 2807,
+    "Size": 5,
+    "BombCounter": 4,
+    "Flag": "",
+    "FlagCounter": 0
+  },
+  "YHx016dZMKAMMo86": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "1",
+        "1",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "2",
+        "bomb",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "bomb",
+        "3",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "bomb",
+        "3",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "bomb",
+        "2",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "true",
+        "flag",
+        "flag"
+      ],
+      [
+        "false",
+        "flag",
+        "flag",
+        "flag",
+        "flag"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 3095,
+    "Size": 5,
+    "BombCounter": 4,
+    "Flag": "true",
+    "FlagCounter": 9
+  },
+  "ZY4LDSwnnpNLjAA3": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "1",
+        "2",
+        "2",
+        "1",
+        "0"
+      ],
+      [
+        "1",
+        "bomb",
+        "bomb",
+        "1",
+        "0"
+      ],
+      [
+        "1",
+        "2",
+        "2",
+        "1",
+        "0"
+      ],
+      [
+        "2",
+        "2",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "bomb",
+        "bomb",
+        "1",
+        "0",
+        "0"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "true",
+        "true",
+        "true",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 3023,
+    "Size": 5,
+    "BombCounter": 4,
+    "Flag": "false",
+    "FlagCounter": 20
+  },
+  "Zx1w28t0fIjMgCnq": {
     "Key": "",
     "PlayingField": [
       [
@@ -885,6 +4099,417 @@
         "0",
         "0"
       ],
+      [
+        "1",
+        "2",
+        "2",
+        "1",
+        "0"
+      ],
+      [
+        "1",
+        "bomb",
+        "bomb",
+        "2",
+        "1"
+      ],
+      [
+        "2",
+        "3",
+        "4",
+        "bomb",
+        "1"
+      ],
+      [
+        "1",
+        "bomb",
+        "2",
+        "1",
+        "1"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 2990,
+    "Size": 5,
+    "BombCounter": 4,
+    "Flag": "",
+    "FlagCounter": 0
+  },
+  "abJqdINWsr8Uzzl7": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "1",
+        "2",
+        "bomb",
+        "1",
+        "0"
+      ],
+      [
+        "bomb",
+        "3",
+        "1",
+        "1",
+        "0"
+      ],
+      [
+        "bomb",
+        "2",
+        "1",
+        "1",
+        "1"
+      ],
+      [
+        "1",
+        "1",
+        "1",
+        "bomb",
+        "1"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "1",
+        "1"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "true",
+        "true",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "flag",
+        "flag",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "flag",
+        "flag",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 3016,
+    "Size": 5,
+    "BombCounter": 4,
+    "Flag": "true",
+    "FlagCounter": 16
+  },
+  "b9iW07hSuPFWadBh": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "0",
+        "0",
+        "2",
+        "bomb",
+        "bomb",
+        "2",
+        "1",
+        "1"
+      ],
+      [
+        "1",
+        "1",
+        "2",
+        "bomb",
+        "3",
+        "3",
+        "bomb",
+        "2"
+      ],
+      [
+        "bomb",
+        "3",
+        "3",
+        "2",
+        "3",
+        "4",
+        "bomb",
+        "3"
+      ],
+      [
+        "bomb",
+        "bomb",
+        "4",
+        "bomb",
+        "4",
+        "bomb",
+        "bomb",
+        "2"
+      ],
+      [
+        "3",
+        "bomb",
+        "4",
+        "bomb",
+        "5",
+        "bomb",
+        "4",
+        "1"
+      ],
+      [
+        "2",
+        "2",
+        "3",
+        "2",
+        "4",
+        "bomb",
+        "4",
+        "2"
+      ],
+      [
+        "bomb",
+        "2",
+        "2",
+        "bomb",
+        "2",
+        "2",
+        "bomb",
+        "bomb"
+      ],
+      [
+        "1",
+        "2",
+        "bomb",
+        "2",
+        "1",
+        "1",
+        "2",
+        "2"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 3097,
+    "Size": 8,
+    "BombCounter": 20,
+    "Flag": "",
+    "FlagCounter": 20
+  },
+  "cXB8JxqlgYwoNMwX": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "0",
+        "0",
+        "0",
+        "1",
+        "bomb"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "2",
+        "2"
+      ],
+      [
+        "0",
+        "1",
+        "2",
+        "bomb",
+        "1"
+      ],
+      [
+        "1",
+        "2",
+        "bomb",
+        "2",
+        "1"
+      ],
+      [
+        "bomb",
+        "2",
+        "1",
+        "1",
+        "0"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "true",
+        "true",
+        "true",
+        "true",
+        "false"
+      ],
+      [
+        "true",
+        "true",
+        "true",
+        "true",
+        "false"
+      ],
+      [
+        "true",
+        "true",
+        "true",
+        "false",
+        "false"
+      ],
+      [
+        "true",
+        "true",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 0,
+    "Size": 5,
+    "BombCounter": 4,
+    "Flag": "",
+    "FlagCounter": 0
+  },
+  "e4XwB4OYLA5p0tCN": {
+    "Key": "",
+    "PlayingField": [
       [
         "0",
         "0",
@@ -901,141 +4526,916 @@
       ],
       [
         "bomb",
+        "3",
+        "1",
+        "1",
+        "1"
+      ],
+      [
+        "bomb",
+        "bomb",
+        "1",
+        "0",
+        "0"
+      ],
+      [
         "2",
+        "2",
+        "1",
+        "0",
+        "0"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "true",
+        "true",
+        "true",
+        "true",
+        "false"
+      ],
+      [
+        "true",
+        "true",
+        "true",
+        "true",
+        "false"
+      ],
+      [
+        "false",
+        "true",
+        "true",
+        "true",
+        "true"
+      ],
+      [
+        "false",
+        "false",
+        "true",
+        "true",
+        "true"
+      ],
+      [
+        "false",
+        "false",
+        "true",
+        "true",
+        "true"
+      ]
+    ],
+    "MessageID": 2885,
+    "Size": 5,
+    "BombCounter": 4,
+    "Flag": "false",
+    "FlagCounter": 0
+  },
+  "eGvfYW7jDdHbkS5A": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "0",
+        "0",
+        "1",
+        "2",
+        "2"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "bomb",
+        "bomb"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "2",
+        "2"
+      ],
+      [
+        "1",
+        "1",
+        "2",
+        "1",
+        "1"
+      ],
+      [
+        "1",
+        "bomb",
+        "2",
+        "bomb",
+        "1"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "true",
+        "true",
+        "true",
+        "flag",
+        "false"
+      ],
+      [
+        "true",
+        "true",
+        "true",
+        "flag",
+        "false"
+      ],
+      [
+        "true",
+        "flag",
+        "true",
+        "flag",
+        "false"
+      ],
+      [
+        "true",
+        "true",
+        "true",
+        "flag",
+        "false"
+      ],
+      [
+        "false",
+        "flag",
+        "flag",
+        "flag",
+        "false"
+      ]
+    ],
+    "MessageID": 3055,
+    "Size": 5,
+    "BombCounter": 4,
+    "Flag": "true",
+    "FlagCounter": 12
+  },
+  "eI0dKRXKLfOCS9uA": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "1",
+        "bomb",
+        "4",
+        "bomb",
+        "2"
+      ],
+      [
+        "1",
+        "2",
+        "bomb",
+        "bomb",
+        "2"
+      ],
+      [
+        "0",
+        "1",
+        "2",
+        "2",
+        "1"
+      ],
+      [
+        "1",
+        "1",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "bomb",
+        "1",
+        "0",
+        "0"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 2674,
+    "Size": 5,
+    "BombCounter": 5,
+    "Flag": "false",
+    "FlagCounter": 0
+  },
+  "eiF5o3DizSauuDBm": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "bomb",
+        "3",
+        "bomb",
+        "1",
+        "0"
+      ],
+      [
+        "2",
+        "bomb",
+        "2",
+        "2",
+        "1"
+      ],
+      [
+        "1",
+        "1",
+        "1",
+        "1",
+        "bomb"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "2",
+        "2"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "bomb",
+        "1"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 2612,
+    "Size": 5,
+    "BombCounter": 5,
+    "Flag": "",
+    "FlagCounter": 0
+  },
+  "evAEUx6FoIeLy4fQ": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "bomb",
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "2",
+        "2",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "2",
+        "bomb",
+        "2",
+        "0",
+        "0"
+      ],
+      [
+        "3",
+        "bomb",
+        "2",
+        "1",
+        "1"
+      ],
+      [
+        "bomb",
+        "2",
+        "1",
+        "1",
+        "bomb"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "true",
+        "true",
+        "true",
+        "true"
+      ],
+      [
+        "false",
+        "true",
+        "true",
+        "true",
+        "true"
+      ],
+      [
+        "false",
+        "false",
+        "true",
+        "true",
+        "true"
+      ],
+      [
+        "false",
+        "flag",
+        "true",
+        "true",
+        "true"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 0,
+    "Size": 5,
+    "BombCounter": 5,
+    "Flag": "true",
+    "FlagCounter": 0
+  },
+  "faJHHor2jgzNhbPB": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "1",
+        "bomb",
+        "2",
+        "bomb",
+        "2"
+      ],
+      [
+        "1",
+        "1",
+        "2",
+        "2",
+        "bomb"
+      ],
+      [
+        "1",
+        "1",
+        "0",
+        "1",
+        "1"
+      ],
+      [
+        "bomb",
+        "2",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "bomb",
+        "2",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "flag",
+        "flag",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "flag",
+        "true",
+        "true",
+        "true",
+        "false"
+      ],
+      [
+        "false",
+        "true",
+        "true",
+        "true",
+        "true"
+      ],
+      [
+        "false",
+        "true",
+        "true",
+        "true",
+        "true"
+      ],
+      [
+        "false",
+        "true",
+        "true",
+        "true",
+        "true"
+      ]
+    ],
+    "MessageID": 0,
+    "Size": 5,
+    "BombCounter": 5,
+    "Flag": "true",
+    "FlagCounter": 0
+  },
+  "j08t4OVHpyT6sIwv": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "0",
+        "0",
+        "0",
+        "1",
+        "bomb"
+      ],
+      [
+        "1",
+        "1",
+        "1",
+        "2",
+        "2"
+      ],
+      [
+        "1",
+        "bomb",
+        "1",
+        "1",
+        "bomb"
+      ],
+      [
+        "1",
+        "1",
+        "1",
+        "2",
+        "2"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "1",
+        "bomb"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "flag",
+        "flag",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "flag",
+        "flag",
+        "true",
+        "false"
+      ],
+      [
+        "false",
+        "flag",
+        "flag",
+        "flag",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 3065,
+    "Size": 5,
+    "BombCounter": 4,
+    "Flag": "true",
+    "FlagCounter": 8
+  },
+  "j1Bb287ihpujPmIy": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "bomb",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "bomb",
+        "1",
+        "0"
+      ],
+      [
+        "1",
+        "1",
+        "2",
+        "2",
+        "2",
+        "1"
+      ],
+      [
+        "1",
+        "bomb",
+        "1",
+        "1",
+        "bomb",
+        "1"
+      ],
+      [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "flag",
+        "flag",
+        "flag",
+        "flag"
+      ],
+      [
+        "false",
+        "false",
+        "flag",
+        "flag",
+        "false",
+        "flag"
+      ],
+      [
+        "false",
+        "false",
+        "flag",
+        "flag",
+        "flag",
+        "true"
+      ],
+      [
+        "false",
+        "false",
+        "flag",
+        "flag",
+        "flag",
+        "flag"
+      ],
+      [
+        "false",
+        "false",
+        "flag",
+        "flag",
+        "flag",
+        "flag"
+      ]
+    ],
+    "MessageID": 0,
+    "Size": 6,
+    "BombCounter": 4,
+    "Flag": "true",
+    "FlagCounter": 0
+  },
+  "kHxBNpTYLOrhG3AP": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "bomb",
+        "2",
+        "1",
+        "2",
+        "1"
+      ],
+      [
+        "2",
+        "3",
+        "bomb",
+        "2",
+        "bomb"
+      ],
+      [
+        "bomb",
+        "2",
+        "1",
+        "2",
+        "1"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 3013,
+    "Size": 5,
+    "BombCounter": 4,
+    "Flag": "",
+    "FlagCounter": 0
+  },
+  "lBaqocVdyQwKqvlE": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "1",
+        "bomb",
+        "2",
+        "3",
+        "bomb"
+      ],
+      [
+        "1",
+        "1",
+        "2",
+        "bomb",
+        "bomb"
+      ],
+      [
+        "0",
+        "0",
         "2",
         "3",
         "3"
       ],
       [
-        "2",
+        "0",
+        "0",
+        "1",
         "bomb",
-        "2",
-        "bomb",
-        "bomb"
+        "1"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "1",
+        "1"
       ]
     ],
     "OpenedButtonsField": [
       [
-        true,
-        true,
-        true,
-        true,
-        true
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
       ],
       [
-        true,
-        true,
-        true,
-        true,
-        true
+        "true",
+        "true",
+        "true",
+        "false",
+        "false"
       ],
       [
-        true,
-        true,
-        true,
-        true,
-        false
+        "true",
+        "true",
+        "true",
+        "false",
+        "false"
       ],
       [
-        false,
-        true,
-        true,
-        true,
-        false
+        "true",
+        "true",
+        "true",
+        "false",
+        "false"
       ],
       [
-        false,
-        false,
-        false,
-        false,
-        false
+        "true",
+        "true",
+        "true",
+        "false",
+        "false"
       ]
     ],
     "MessageID": 0,
     "Size": 5,
-    "BombCounter": 5
+    "BombCounter": 5,
+    "Flag": "",
+    "FlagCounter": 0
   },
-  "bOn1h2rjfdruw2JE": {
+  "lTV5HFHZjTQchZXR": {
     "Key": "",
     "PlayingField": [
       [
-        "0",
-        "0",
-        "0",
-        "0",
-        "0"
-      ],
-      [
-        "2",
-        "2",
         "1",
-        "1",
+        "bomb",
+        "bomb",
+        "2",
         "1"
       ],
       [
-        "bomb",
-        "bomb",
+        "1",
+        "2",
         "2",
         "2",
         "bomb"
       ],
       [
-        "3",
-        "4",
-        "bomb",
-        "2",
+        "1",
+        "1",
+        "1",
+        "1",
         "1"
       ],
       [
         "1",
         "bomb",
-        "2",
         "1",
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "1",
+        "1",
+        "0",
         "0"
       ]
     ],
     "OpenedButtonsField": [
       [
-        false,
-        false,
-        false,
-        false,
-        false
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
       ],
       [
-        false,
-        false,
-        false,
-        false,
-        false
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
       ],
       [
-        false,
-        false,
-        false,
-        false,
-        false
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
       ],
       [
-        false,
-        false,
-        false,
-        false,
-        false
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
       ],
       [
-        false,
-        false,
-        false,
-        false,
-        false
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
       ]
     ],
-    "MessageID": 1734,
+    "MessageID": 3005,
     "Size": 5,
-    "BombCounter": 5
+    "BombCounter": 4,
+    "Flag": "",
+    "FlagCounter": 0
   },
-  "bUNk4vRxW33ELvS3": {
+  "ls96MiVUUFrQ1m3z": {
     "Key": "",
     "PlayingField": [
       [
@@ -1046,324 +5446,357 @@
         "1"
       ],
       [
-        "0",
-        "0",
+        "1",
+        "1",
         "1",
         "2",
         "2"
       ],
       [
+        "bomb",
         "1",
-        "1",
-        "2",
+        "0",
         "2",
         "bomb"
       ],
       [
         "1",
-        "bomb",
-        "2",
-        "bomb",
-        "3"
-      ],
-      [
         "1",
-        "1",
-        "2",
+        "0",
         "2",
         "bomb"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "1",
+        "1"
       ]
     ],
     "OpenedButtonsField": [
       [
-        true,
-        true,
-        true,
-        false,
-        false
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
       ],
       [
-        true,
-        true,
-        true,
-        false,
-        false
+        "false",
+        "true",
+        "true",
+        "true",
+        "false"
       ],
       [
-        true,
-        true,
-        true,
-        false,
-        false
+        "false",
+        "true",
+        "true",
+        "true",
+        "false"
       ],
       [
-        false,
-        false,
-        false,
-        false,
-        false
+        "true",
+        "true",
+        "true",
+        "true",
+        "false"
       ],
       [
-        false,
-        false,
-        false,
-        false,
-        false
+        "true",
+        "true",
+        "true",
+        "true",
+        "false"
       ]
     ],
-    "MessageID": 0,
+    "MessageID": 3050,
     "Size": 5,
-    "BombCounter": 5
+    "BombCounter": 4,
+    "Flag": "false",
+    "FlagCounter": 20
   },
-  "iqI8JOFHZ0IaAB9d": {
+  "m9whfazcHkj8eXmj": {
     "Key": "",
     "PlayingField": [
       [
         "0",
         "0",
         "0",
-        "0",
-        "0",
-        "2",
-        "bomb",
-        "bomb"
+        "1",
+        "1"
       ],
       [
-        "0",
-        "0",
-        "0",
-        "0",
-        "0",
-        "2",
-        "bomb",
-        "bomb"
-      ],
-      [
-        "0",
-        "0",
         "0",
         "0",
         "0",
         "1",
-        "2",
-        "2"
+        "bomb"
       ],
       [
         "0",
         "0",
         "0",
+        "1",
+        "1"
+      ],
+      [
         "0",
+        "1",
+        "2",
+        "3",
+        "2"
+      ],
+      [
         "0",
-        "0",
-        "0",
+        "1",
+        "bomb",
+        "bomb",
+        "bomb"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "flag",
+        "flag",
+        "false",
+        "false"
+      ],
+      [
+        "flag",
+        "flag",
+        "flag",
+        "true",
+        "false"
+      ],
+      [
+        "flag",
+        "flag",
+        "flag",
+        "flag",
+        "false"
+      ]
+    ],
+    "MessageID": 3030,
+    "Size": 5,
+    "BombCounter": 4,
+    "Flag": "false",
+    "FlagCounter": 11
+  },
+  "mWyhUVLeXiDQ8IDW": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "2",
+        "bomb",
+        "bomb",
+        "1",
         "0"
       ],
       [
-        "0",
-        "1",
-        "2",
-        "2",
-        "2",
-        "2",
-        "2",
-        "1"
-      ],
-      [
-        "1",
-        "2",
-        "bomb",
-        "bomb",
-        "3",
-        "bomb",
-        "bomb",
-        "2"
-      ],
-      [
-        "1",
-        "bomb",
-        "3",
-        "2",
-        "3",
-        "bomb",
-        "bomb",
-        "3"
-      ],
-      [
-        "1",
-        "1",
-        "1",
-        "0",
-        "1",
-        "2",
-        "3",
-        "bomb"
-      ]
-    ],
-    "OpenedButtonsField": [
-      [
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        false,
-        false
-      ],
-      [
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        false,
-        false
-      ],
-      [
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true
-      ],
-      [
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true
-      ],
-      [
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true
-      ],
-      [
-        true,
-        true,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
-      ],
-      [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
-      ],
-      [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
-      ]
-    ],
-    "MessageID": 0,
-    "Size": 8,
-    "BombCounter": 12
-  },
-  "mq4ZDVhShHAOKPRd": {
-    "Key": "",
-    "PlayingField": [
-      [
-        "0",
-        "2",
-        "bomb",
-        "bomb",
-        "2",
-        "1",
-        "1",
-        "1"
-      ],
-      [
-        "0",
-        "2",
         "bomb",
         "4",
-        "bomb",
-        "1",
-        "1",
-        "bomb"
-      ],
-      [
-        "1",
         "2",
         "1",
-        "2",
-        "1",
-        "1",
-        "1",
-        "1"
-      ],
-      [
-        "bomb",
-        "1",
-        "1",
-        "1",
-        "1",
-        "0",
-        "0",
         "0"
       ],
       [
-        "3",
-        "3",
-        "2",
         "bomb",
-        "1",
+        "2",
         "0",
         "1",
         "1"
       ],
       [
-        "bomb",
-        "bomb",
-        "2",
         "1",
         "1",
+        "0",
         "1",
-        "2",
         "bomb"
       ],
       [
-        "3",
-        "3",
-        "2",
+        "0",
         "0",
         "0",
         "1",
+        "1"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "true",
+        "true",
+        "true",
+        "false"
+      ],
+      [
+        "false",
+        "true",
+        "true",
+        "true",
+        "flag"
+      ],
+      [
+        "true",
+        "true",
+        "true",
+        "true",
+        "flag"
+      ],
+      [
+        "true",
+        "true",
+        "true",
+        "true",
+        "false"
+      ]
+    ],
+    "MessageID": 2691,
+    "Size": 5,
+    "BombCounter": 5,
+    "Flag": "true",
+    "FlagCounter": 0
+  },
+  "mwPkkIZZ7hGFzLbh": {
+    "Key": "",
+    "PlayingField": [
+      [
         "bomb",
+        "bomb",
+        "2",
+        "bomb",
+        "bomb"
+      ],
+      [
+        "bomb",
+        "3",
+        "2",
+        "2",
         "2"
       ],
       [
         "1",
-        "bomb",
         "1",
         "0",
+        "1",
+        "1"
+      ],
+      [
+        "1",
+        "2",
+        "2",
+        "2",
+        "bomb"
+      ],
+      [
+        "1",
+        "bomb",
+        "bomb",
+        "2",
+        "1"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "true",
+        "true",
+        "true",
+        "false"
+      ],
+      [
+        "false",
+        "true",
+        "true",
+        "true",
+        "false"
+      ],
+      [
+        "false",
+        "true",
+        "true",
+        "true",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 0,
+    "Size": 5,
+    "BombCounter": 8,
+    "Flag": "",
+    "FlagCounter": 0
+  },
+  "n5t8hPkBA4C9pibh": {
+    "Key": "",
+    "PlayingField": [
+      [
         "0",
+        "0",
+        "0",
+        "1",
+        "1"
+      ],
+      [
+        "1",
+        "1",
+        "0",
+        "1",
+        "bomb"
+      ],
+      [
+        "bomb",
+        "2",
+        "1",
+        "2",
+        "2"
+      ],
+      [
+        "3",
+        "bomb",
+        "1",
+        "1",
+        "bomb"
+      ],
+      [
+        "bomb",
+        "2",
         "1",
         "1",
         "1"
@@ -1371,88 +5804,753 @@
     ],
     "OpenedButtonsField": [
       [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
       ],
       [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
       ],
       [
-        false,
-        false,
-        false,
-        false,
-        true,
-        true,
-        true,
-        true
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
       ],
       [
-        false,
-        false,
-        false,
-        false,
-        true,
-        true,
-        true,
-        true
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
       ],
       [
-        false,
-        false,
-        false,
-        false,
-        true,
-        true,
-        true,
-        true
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 2615,
+    "Size": 5,
+    "BombCounter": 5,
+    "Flag": "",
+    "FlagCounter": 0
+  },
+  "qyakGIltE3flrSVh": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
       ],
       [
-        false,
-        false,
-        false,
-        false,
-        true,
-        true,
-        true,
-        false
+        "1",
+        "1",
+        "0",
+        "0",
+        "0"
       ],
       [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
+        "bomb",
+        "1",
+        "1",
+        "2",
+        "2"
       ],
       [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
+        "1",
+        "2",
+        "2",
+        "bomb",
+        "bomb"
+      ],
+      [
+        "0",
+        "1",
+        "bomb",
+        "3",
+        "2"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "true",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
       ]
     ],
     "MessageID": 0,
-    "Size": 8,
-    "BombCounter": 12
+    "Size": 5,
+    "BombCounter": 4,
+    "Flag": "false",
+    "FlagCounter": 0
+  },
+  "r7cxiaEbLXtYXWFK": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "1",
+        "3",
+        "bomb",
+        "2",
+        "0"
+      ],
+      [
+        "1",
+        "bomb",
+        "bomb",
+        "2",
+        "0"
+      ],
+      [
+        "1",
+        "2",
+        "3",
+        "2",
+        "1"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "bomb",
+        "2"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "2",
+        "bomb"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 2663,
+    "Size": 5,
+    "BombCounter": 5,
+    "Flag": "false",
+    "FlagCounter": 0
+  },
+  "stIZbhim3Ml3bYQH": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "1",
+        "bomb",
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "1",
+        "1",
+        "0",
+        "1",
+        "1"
+      ],
+      [
+        "0",
+        "1",
+        "1",
+        "1",
+        "1",
+        "bomb"
+      ],
+      [
+        "1",
+        "2",
+        "bomb",
+        "2",
+        "2",
+        "2"
+      ],
+      [
+        "1",
+        "bomb",
+        "3",
+        "3",
+        "bomb",
+        "1"
+      ],
+      [
+        "1",
+        "2",
+        "bomb",
+        "2",
+        "1",
+        "1"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "true",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 2752,
+    "Size": 6,
+    "BombCounter": 6,
+    "Flag": "",
+    "FlagCounter": 0
+  },
+  "vEi6c8BlEyUHCdaX": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "1",
+        "bomb",
+        "2",
+        "1",
+        "1"
+      ],
+      [
+        "1",
+        "1",
+        "3",
+        "bomb",
+        "2"
+      ],
+      [
+        "1",
+        "1",
+        "2",
+        "bomb",
+        "2"
+      ],
+      [
+        "bomb",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      [
+        "1",
+        "1",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "flag",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "flag",
+        "flag",
+        "flag",
+        "flag",
+        "flag"
+      ],
+      [
+        "flag",
+        "flag",
+        "true",
+        "flag",
+        "flag"
+      ],
+      [
+        "flag",
+        "flag",
+        "flag",
+        "flag",
+        "flag"
+      ],
+      [
+        "flag",
+        "flag",
+        "flag",
+        "flag",
+        "flag"
+      ]
+    ],
+    "MessageID": 3062,
+    "Size": 5,
+    "BombCounter": 4,
+    "Flag": "true",
+    "FlagCounter": 0
+  },
+  "w1yEulrr6PePnGwy": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "1",
+        "1",
+        "1",
+        "0",
+        "2",
+        "bomb"
+      ],
+      [
+        "2",
+        "bomb",
+        "1",
+        "0",
+        "2",
+        "bomb"
+      ],
+      [
+        "bomb",
+        "2",
+        "1",
+        "0",
+        "1",
+        "1"
+      ],
+      [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "0"
+      ],
+      [
+        "1",
+        "1",
+        "1",
+        "bomb",
+        "1",
+        "0"
+      ],
+      [
+        "bomb",
+        "1",
+        "1",
+        "1",
+        "1",
+        "0"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 3008,
+    "Size": 6,
+    "BombCounter": 6,
+    "Flag": "",
+    "FlagCounter": 0
+  },
+  "yN8MqtzWXCRo9P1W": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "1",
+        "1",
+        "2",
+        "2",
+        "bomb"
+      ],
+      [
+        "1",
+        "bomb",
+        "3",
+        "bomb",
+        "2"
+      ],
+      [
+        "2",
+        "3",
+        "bomb",
+        "2",
+        "1"
+      ],
+      [
+        "1",
+        "bomb",
+        "2",
+        "1",
+        "0"
+      ],
+      [
+        "1",
+        "1",
+        "1",
+        "0",
+        "0"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 2657,
+    "Size": 5,
+    "BombCounter": 5,
+    "Flag": "false",
+    "FlagCounter": 0
+  },
+  "ypgsPoiri6OTkeJV": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "1",
+        "0",
+        "1",
+        "1"
+      ],
+      [
+        "bomb",
+        "1",
+        "0",
+        "2",
+        "bomb"
+      ],
+      [
+        "1",
+        "1",
+        "1",
+        "4",
+        "bomb"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "bomb",
+        "bomb"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "true",
+        "true",
+        "true",
+        "true",
+        "true"
+      ],
+      [
+        "true",
+        "true",
+        "true",
+        "true",
+        "true"
+      ],
+      [
+        "false",
+        "true",
+        "true",
+        "true",
+        "false"
+      ],
+      [
+        "false",
+        "true",
+        "true",
+        "true",
+        "false"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 0,
+    "Size": 5,
+    "BombCounter": 5,
+    "Flag": "",
+    "FlagCounter": 0
+  },
+  "zNs2qvQ3epOUst6Z": {
+    "Key": "",
+    "PlayingField": [
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "2",
+        "2",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "bomb",
+        "bomb",
+        "3",
+        "2",
+        "2"
+      ],
+      [
+        "3",
+        "bomb",
+        "3",
+        "bomb",
+        "bomb"
+      ]
+    ],
+    "OpenedButtonsField": [
+      [
+        "true",
+        "true",
+        "true",
+        "true",
+        "true"
+      ],
+      [
+        "true",
+        "true",
+        "true",
+        "true",
+        "true"
+      ],
+      [
+        "true",
+        "true",
+        "true",
+        "true",
+        "true"
+      ],
+      [
+        "false",
+        "false",
+        "true",
+        "true",
+        "true"
+      ],
+      [
+        "false",
+        "false",
+        "false",
+        "false",
+        "false"
+      ]
+    ],
+    "MessageID": 0,
+    "Size": 5,
+    "BombCounter": 5,
+    "Flag": "true",
+    "FlagCounter": 0
   }
 }

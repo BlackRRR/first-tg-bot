@@ -5,18 +5,26 @@ import (
 	"strconv"
 )
 
+var (
+	Level       = map[int]int{}
+	FlagCounter int
+	Difficult   string
+)
+
 type Game struct {
 	Key                string
 	PlayingField       [][]string
-	OpenedButtonsField [][]bool
+	OpenedButtonsField [][]string
 	MessageID          int
 	Size               int
 	BombCounter        int
+	Flag               string
+	FlagCounter        int
 }
 
 func (g *Game) FillEmptyField() {
 	var field [][]string
-	var open [][]bool
+	var open [][]string
 
 	for i := 0; i < g.Size; i++ {
 		field = append(field, []string{})
@@ -27,9 +35,9 @@ func (g *Game) FillEmptyField() {
 	g.PlayingField = field
 
 	for i := 0; i < g.Size; i++ {
-		open = append(open, []bool{})
+		open = append(open, []string{})
 		for j := 0; j < g.Size; j++ {
-			open[i] = append(open[i], false)
+			open[i] = append(open[i], "false")
 		}
 	}
 	g.OpenedButtonsField = open

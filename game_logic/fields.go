@@ -3,6 +3,7 @@ package game_logic
 import (
 	"fmt"
 	"github.com/BlackRRR/first-tg-bot/assets"
+	"github.com/BlackRRR/first-tg-bot/language"
 	"github.com/BlackRRR/first-tg-bot/models"
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api"
 	"log"
@@ -21,11 +22,11 @@ func OpenZero(i, j int, key string) {
 			row := i + k
 			col := j + l
 
-			if assets.Games[key].OpenedButtonsField[row][col] {
+			if assets.Games[key].OpenedButtonsField[row][col] == "true" || assets.Games[key].OpenedButtonsField[row][col] == "flag" {
 				continue
 			}
 
-			assets.Games[key].OpenedButtonsField[row][col] = true
+			assets.Games[key].OpenedButtonsField[row][col] = "true"
 			if assets.Games[key].PlayingField[row][col] == "0" {
 				OpenZero(row, col, key)
 			}
@@ -36,8 +37,11 @@ func OpenZero(i, j int, key string) {
 func OpenAllBombsAfterWin(key string) {
 	for i := 0; i < assets.Games[key].Size; i++ {
 		for j := 0; j < assets.Games[key].Size; j++ {
-			if assets.Games[key].OpenedButtonsField[i][j] == false && assets.Games[key].PlayingField[i][j] == "bomb" {
-				assets.Games[key].OpenedButtonsField[i][j] = true
+			if assets.Games[key].OpenedButtonsField[i][j] == "false" && assets.Games[key].PlayingField[i][j] == "bomb" {
+				assets.Games[key].OpenedButtonsField[i][j] = "true"
+			}
+			if assets.Games[key].OpenedButtonsField[i][j] == "flag" && assets.Games[key].PlayingField[i][j] == "bomb" {
+				assets.Games[key].OpenedButtonsField[i][j] = "❌"
 			}
 		}
 	}
@@ -47,7 +51,7 @@ func Counter(key string) int {
 	var counter int
 	for i := 0; i < assets.Games[key].Size; i++ {
 		for j := 0; j < assets.Games[key].Size; j++ {
-			if assets.Games[key].OpenedButtonsField[i][j] {
+			if assets.Games[key].OpenedButtonsField[i][j] == "true" {
 				counter++
 			}
 		}
@@ -85,5 +89,23 @@ func printOpenField(field [][]bool, key string) {
 			fmt.Print(field[i][j], " ")
 		}
 		fmt.Println()
+	}
+}
+
+func ReEditForFlags(callback *tgbotapi.CallbackQuery, bot *tgbotapi.BotAPI, key string) {
+	replyMarkup := CreateFieldMarkUp(assets.Games[key], key)
+	text := language.FormatText(language.UserLang.Language, "game_started", assets.Games[key].BombCounter, assets.Games[key].FlagCounter)
+
+	replyCfg := tgbotapi.EditMessageTextConfig{
+		BaseEdit: tgbotapi.BaseEdit{
+			ChatID:      callback.Message.Chat.ID,
+			MessageID:   callback.Message.MessageID,
+			ReplyMarkup: &replyMarkup,
+		},
+		Text: text,
+	}
+
+	if _, err := bot.Send(replyCfg); err != nil {
+		log.Println(err)
 	}
 }

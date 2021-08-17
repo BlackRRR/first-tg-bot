@@ -14,23 +14,41 @@ const (
 	GameKeyLength        = 16
 )
 
-func TakeFieldSize(update *tgbotapi.Update, bot *tgbotapi.BotAPI) {
-	msg := tgbotapi.NewMessage(update.Message.Chat.ID, language.LangText(language.UserLang.Language, "take_field_size"))
-	msg.ReplyMarkup = tgbotapi.NewInlineKeyboardMarkup(
+func TakeFieldSize(callback *tgbotapi.CallbackQuery, bot *tgbotapi.BotAPI) {
+	Text := language.LangText(language.UserLang.Language, "take_field_size")
+	ReplyMarkup := tgbotapi.NewInlineKeyboardMarkup(
 		tgbotapi.NewInlineKeyboardRow(
 			tgbotapi.NewInlineKeyboardButtonData("5X5", "5"),
 			tgbotapi.NewInlineKeyboardButtonData("6X6", "6"),
 			tgbotapi.NewInlineKeyboardButtonData("7X7", "7"),
 			tgbotapi.NewInlineKeyboardButtonData("8X8", "8"),
 		))
+
+	msg := tgbotapi.EditMessageTextConfig{
+		BaseEdit: tgbotapi.BaseEdit{
+			ChatID:      callback.Message.Chat.ID,
+			MessageID:   callback.Message.MessageID,
+			ReplyMarkup: &ReplyMarkup,
+		},
+		Text: Text,
+	}
 	if _, err := bot.Send(msg); err != nil {
 		log.Println(err)
 	}
 }
 
 func NewSapperGame(callback *tgbotapi.CallbackQuery, bot *tgbotapi.BotAPI, key string) {
-	msg := tgbotapi.NewMessage(callback.Message.Chat.ID, language.LangText(language.UserLang.Language, "game_started"))
-	msg.ReplyMarkup = CreateFieldMarkUp(assets.Games[key], key)
+	Text := language.FormatText(language.UserLang.Language, "game_started", assets.Games[key].BombCounter, assets.Games[key].FlagCounter)
+	ReplyMarkup := CreateFieldMarkUp(assets.Games[key], key)
+
+	msg := tgbotapi.EditMessageTextConfig{
+		BaseEdit: tgbotapi.BaseEdit{
+			ChatID:      callback.Message.Chat.ID,
+			MessageID:   callback.Message.MessageID,
+			ReplyMarkup: &ReplyMarkup,
+		},
+		Text: Text,
+	}
 	msgData, err := bot.Send(msg)
 	if err != nil {
 		log.Println(err)
@@ -50,6 +68,7 @@ func generateKey() string {
 
 func GenerateField(size int, bombCounter int) string {
 	key := generateKey()
+
 	game := &models.Game{
 		Size:        size,
 		BombCounter: bombCounter,
