@@ -8,6 +8,6 @@ type DBConfig struct {
 
 var DBCfg = DBConfig{
 	User:     "root",
-	Password: ":!BlackR1",
+	Password: "", 
 	Name:     "sapper",
 }
