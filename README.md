@@ -1,3 +1,3 @@
 # first-tg-bot
 
-Sapper telegramm bot
+SAPPER TELEGRAMM BOT
